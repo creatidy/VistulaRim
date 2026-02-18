@@ -111,6 +111,10 @@ When planning the next iteration, request:
 - Milestone 1 is complete (stable boot/new game/playtest baseline).
     
 - Milestone 2 is complete (gameplay identity baseline: Wildcat + Vokrii + Odin + living world mods).
+
+- Milestone 3 is complete and tested (quest + content module). Note: see `baseline\` exports for the exact modlist delta.
+
+- Milestone 4 is the current focus (in progress): Followers (Serana-first).
     
 - The Patch Pack’s original patch plugin is tracked in this repo at `mods\VistulaRim\Patch\VistulaRim_Patch.esp`.
     
@@ -297,7 +301,7 @@ Definition of done:
     
 - No obvious script spam.
     
-Status: next (scope to be defined).
+Status: complete and tested. Note: see `baseline\` exports for the exact modlist delta.
 
 Notes:
 - The current baseline already includes lightweight content (`Missives` and `The Forgotten City`) per the MO2 exports under `baseline\`.
@@ -308,11 +312,22 @@ Notes:
 
 Goal: add follower mods as a separate iteration.
 
+Current focus: Serana-first, stability-first, small batch.
+
+Follower stack (Milestone 4):
+- Serana Dialogue Add-On (SDA)
+- Fuz Ro D-oh - Silent Voice
+- Optional: Serana Dialogue Add-On Patch Hub (only if needed)
+
+Why this set: enrich Serana’s dialogue and companion experience while keeping the integration surface small (fewer conflicts, fewer moving parts).
+
 Definition of done:
 
 - Follower acquisition works.
     
 - No conflicts with core gameplay.
+
+Status: in progress.
     
 
 ### Milestone 5: Audio and weather
@@ -430,17 +445,22 @@ Prerequisites:
 
 ## Immediate next step
 
-In the new GPT thread, start with Milestone 3 planning:
+In the new GPT thread, start with Milestone 4 planning (Followers, Serana-first):
 
-1. Decide what Milestone 3 means for VistulaRim (scope + “definition of done”).
+1. Confirm the exact follower stack (SDA + Fuz + optional Patch Hub only if needed).
     
-2. Pick the next small batch of content mods (1–5) and the reason for each.
+2. Install the small batch and export updated `baseline\modlist.txt`, `baseline\plugins.txt`, and `baseline\loadorder.txt`.
     
-3. After installing, export updated `baseline\modlist.txt` and `baseline\plugins.txt` (or move to `profiles\**\` if you’re ready).
+3. Run the workflow loop (LOOT sanity check → xEdit review → forward justified conflicts into `VistulaRim_Patch.esp` → playtest checklist).
     
-4. Run the workflow loop (LOOT sanity check → xEdit review → forward justified conflicts into `VistulaRim_Patch.esp` → playtest checklist).
+4. Playtest checklist (Milestone 4):
+   - Acquire Serana (Dawnguard start as appropriate for your test save).
+   - Recruit and dismiss Serana.
+   - Travel with Serana across multiple cells.
+   - Combat with Serana (at least 1–2 fights).
+   - Save/load with Serana recruited and dismissed.
     
-5. Update `CHANGELOG.md` and `docs/decisions.md` if any new rules were introduced.
+5. Update `CHANGELOG.md`, `README.md`, and `docs/decisions.md` (including any new policies, and the verification results).
     
 
 If you have already chosen the first 10 to 30 mods for VistulaRim Core, paste the names into the new thread and ask GPT to produce:

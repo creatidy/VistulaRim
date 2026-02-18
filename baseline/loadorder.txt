@@ -10,15 +10,27 @@ ccbgssse037-curios.esl
 ccbgssse025-advdsgs.esm
 _ResourcePack.esl
 unofficial skyrim special edition patch.esp
+Campfire.esm
 SkyUI_SE.esp
 MCMHelper.esp
-Odin - Skyrim Magic Overhaul.esp
-Wildcat - Combat of Skyrim.esp
 AI Overhaul.esp
+SeranaDialogAddon.esp
+Odin - Skyrim Magic Overhaul.esp
+Wintersun - Faiths of Skyrim.esp
+Wildcat - Combat of Skyrim.esp
 Extended Encounters.esp
 Immersive Patrols II.esp
 ForgottenCity.esp
 Missives.esp
+FNIS.esp
+RaceMenu.esp
+RaceMenuPlugin.esp
+XPMSE.esp
+SDA Campfire Patch.esp
+OStim.esp
+ImGladYoureHere.esp
+SDA GYH Patch.esp
+SDA Wintersun Patch.esp
 Vokrii - Minimalistic Perks of Skyrim.esp
 Odin - Vokrii Compatibility Patch.esp
 VistulaRim_Patch.esp

@@ -48,3 +48,36 @@ Milestone 2 complete: Gameplay module (first serious identity).
 - Core mechanics verified (combat, perks, magic, encounters).
 - xEdit pass completed (errors/conflicts reviewed).
 - Patch policy maintained: Patch Pack contains only original files.
+
+
+## [0.0.3] - 2026-02-18
+
+Milestone 3 complete: Quest and content module (content expansion without destabilizing the base).
+
+Note: see `baseline/` exports for the exact modlist delta.
+
+### Added
+- Content (baseline snapshot):
+  - Missives
+  - The Forgotten City
+
+### Verified
+- Baseline stability maintained (boot, load/new game, save/load).
+- Content sanity check (travel/entry to content areas; no obvious script spam).
+
+
+## [0.0.4] - 2026-02-18 (In progress)
+
+Milestone 4 in progress (current focus): Followers (Serana-first).
+
+### Target follower stack
+- Serana Dialogue Add-On (SDA)
+- Fuz Ro D-oh - Silent Voice
+- Optional: Serana Dialogue Add-On Patch Hub (only if needed)
+
+### Verification checklist
+- Acquire Serana.
+- Recruit and dismiss Serana.
+- Travel with Serana across multiple cells.
+- Combat with Serana.
+- Save/load with Serana recruited and dismissed.

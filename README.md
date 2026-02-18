@@ -28,7 +28,8 @@ It does not include:
 
 - Milestone 1 complete: stable boot, new game, 5+ minutes playtest, reached open world (out of Helgen).
 - Milestone 2 complete: gameplay identity baseline (combat/perks/magic/living world).
-- Milestone 3 next: scope to be defined and tracked as decisions are made (see docs/decisions.md).
+- Milestone 3 complete and tested: quest + content module. Note: see `baseline/` exports for the exact modlist delta.
+- Milestone 4 in progress (current focus): Followers (Serana-first). Planned stack: Serana Dialogue Add-On (SDA) + Fuz Ro D-oh - Silent Voice (+ optional SDA Patch Hub if needed).
 
 ## Requirements (for local development)
 

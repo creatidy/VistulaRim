@@ -5,6 +5,12 @@
 - Elysium is a private reference only, never a source of files.
 - First product is a Patch Pack: original patch plugin + INIs + original configs + docs (no third party assets).
 
+## Milestones (status)
+- Milestone 1: complete and tested.
+- Milestone 2: complete and tested.
+- Milestone 3: complete and tested (quest + content module). Note: see `baseline/` exports for the exact modlist delta.
+- Milestone 4 (current focus): Followers (Serana-first).
+
 ## Stability and workflow
 - Stability is the primary KPI.
 - Changes are introduced in small batches (1 to 5 mods).
@@ -25,6 +31,15 @@ Gameplay identity (Milestone 2 baseline):
 
 ## Plugin format choices
 - Prefer ESL/light variants when offered, unless a specific patch requires a non-ESL plugin.
+
+## Followers (Milestone 4) scope
+- Stability-first, small batch.
+- Serana-first follower stack: Serana Dialogue Add-On (SDA) + Fuz Ro D-oh - Silent Voice (+ optional SDA Patch Hub only if needed).
+- Scope rule: do not introduce a full follower framework in the first Serana iteration. If a framework is ever needed, treat it as a separate milestone.
+
+## SDA permissions and AI policy (Milestone 4)
+- SDA voice recordings must not be used for AI training or AI voice generation.
+- SDA files must not be redistributed (Patch Pack policy: ship original VistulaRim files only).
 
 
 ## Milestone 2 - gameplay identity
