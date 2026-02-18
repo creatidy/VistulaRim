@@ -29,7 +29,8 @@ It does not include:
 - Milestone 1 complete: stable boot, new game, 5+ minutes playtest, reached open world (out of Helgen).
 - Milestone 2 complete: gameplay identity baseline (combat/perks/magic/living world).
 - Milestone 3 complete and tested: quest + content module. Note: see `baseline/` exports for the exact modlist delta.
-- Milestone 4 in progress (current focus): Followers (Serana-first). Planned stack: Serana Dialogue Add-On (SDA) + Fuz Ro D-oh - Silent Voice (+ optional SDA Patch Hub if needed).
+- Milestone 4 in progress (current focus): Followers (general). Serana is the first anchor, but Milestone 4 is not Serana-only.
+- Milestone 4 optional module (18+): Adults-only animation framework layer. This is optional, clearly labeled, and does not change the core experience if not installed.
 
 ## Requirements (for local development)
 
@@ -96,20 +97,38 @@ Important: this repo does not redistribute third party mods. The list below is g
 
 TODO: If this repo is meant to store exports under repo/profiles/**, move/copy the current files into that structure and update this section to point at the new location.
 
+Adults-only module note (18+):
+- Optional module for mature roleplay and player choice.
+- Consent oriented and player controlled.
+- Does not change the core experience if not installed.
+- No redistribution of adult assets: users download all third party content from original sources.
+
 ### Plugins (enabled)
 From baseline/plugins.txt:
 
 ```
 unofficial skyrim special edition patch.esp
+Campfire.esm
 SkyUI_SE.esp
 MCMHelper.esp
-Odin - Skyrim Magic Overhaul.esp
-Wildcat - Combat of Skyrim.esp
 AI Overhaul.esp
+SeranaDialogAddon.esp
+Odin - Skyrim Magic Overhaul.esp
+Wintersun - Faiths of Skyrim.esp
+Wildcat - Combat of Skyrim.esp
 Extended Encounters.esp
 Immersive Patrols II.esp
 ForgottenCity.esp
 Missives.esp
+FNIS.esp
+RaceMenu.esp
+RaceMenuPlugin.esp
+XPMSE.esp
+SDA Campfire Patch.esp
+OStim.esp
+ImGladYoureHere.esp
+SDA GYH Patch.esp
+SDA Wintersun Patch.esp
 Vokrii - Minimalistic Perks of Skyrim.esp
 Odin - Vokrii Compatibility Patch.esp
 VistulaRim_Patch.esp
@@ -121,10 +140,15 @@ Policy: VistulaRim_Patch.esp loads last.
 From baseline/modlist.txt (lines starting with `+`):
 
 ```
+SDA Patch Hub SE
+I'm Glad You're Here - a follower and spouse appreciation mod - SSE
+Fuz Ro D-oh - Silent Voice
+Serana Dialogue Add-On
 The Forgotten City
 Missives
 VistulaRim - Patch
 Wildcat - Combat of Skyrim - Settings Loader
+Wintersun - Faiths of Skyrim
 Immersive Patrols (Main)
 Extended Encounters
 AI Overhaul SSE
@@ -140,6 +164,17 @@ Keyword Item Distributor
 MergeMapper
 VR Address Library for SKSEVR
 Address Library for SKSE Plugins
+Campfire - Complete Camping System (Supports Skyrim VR)
+OStim Standalone - Advanced Adult Animation Framework
+Open Animation Replacer
+Animation Queue Fix
+Paired Animation Improvements
+XP32 Maximum Skeleton Special Extended
+Fores New Idles in Skyrim SE - FNIS SE
+USSEP Nemesis or Pandora Patch
+Project New Reign - Nemesis Unlimited Behavior Engine
+RaceMenu
+Pandora Behaviour Engine Plus
 Skyrim Script Extender (SKSE64)
 Unofficial Skyrim Special Edition Patch
 ```

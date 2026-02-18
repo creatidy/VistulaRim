@@ -68,12 +68,32 @@ Note: see `baseline/` exports for the exact modlist delta.
 
 ## [0.0.4] - 2026-02-18 (In progress)
 
-Milestone 4 in progress (current focus): Followers (Serana-first).
+Milestone 4 in progress (current focus): Followers (general). Serana is the first anchor.
 
-### Target follower stack
-- Serana Dialogue Add-On (SDA)
+### Added (followers)
+- Serana Dialogue Add-On
 - Fuz Ro D-oh - Silent Voice
-- Optional: Serana Dialogue Add-On Patch Hub (only if needed)
+- I'm Glad You're Here
+- SDA Patch Hub SE
+- SDA patches (plugins):
+  - SDA Campfire Patch.esp
+  - SDA GYH Patch.esp
+  - SDA Wintersun Patch.esp
+
+### Added (optional adults-only layer, 18+)
+- OStim Standalone (plugin: OStim.esp)
+- Open Animation Replacer
+- Animation Queue Fix
+- Paired Animation Improvements
+
+### Installed tooling (animation generation)
+- FNIS
+- Nemesis
+- Pandora
+
+Notes:
+- Only one generation path should be active at a time. Do not mix outputs.
+- If you generate outputs, keep them in a dedicated MO2 output mod and place it with deliberate priority.
 
 ### Verification checklist
 - Acquire Serana.
@@ -81,3 +101,5 @@ Milestone 4 in progress (current focus): Followers (Serana-first).
 - Travel with Serana across multiple cells.
 - Combat with Serana.
 - Save/load with Serana recruited and dismissed.
+- OStim sanity check (optional 18+ module): menu opens, no obvious animation framework errors.
+- General stability: boot to menu, load/new game, no new crash loop, save/load.

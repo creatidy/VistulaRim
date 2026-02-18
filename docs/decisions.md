@@ -9,7 +9,7 @@
 - Milestone 1: complete and tested.
 - Milestone 2: complete and tested.
 - Milestone 3: complete and tested (quest + content module). Note: see `baseline/` exports for the exact modlist delta.
-- Milestone 4 (current focus): Followers (Serana-first).
+- Milestone 4 (current focus): Followers (general) + optional adults-only animation layer (18+).
 
 ## Stability and workflow
 - Stability is the primary KPI.
@@ -34,12 +34,27 @@ Gameplay identity (Milestone 2 baseline):
 
 ## Followers (Milestone 4) scope
 - Stability-first, small batch.
-- Serana-first follower stack: Serana Dialogue Add-On (SDA) + Fuz Ro D-oh - Silent Voice (+ optional SDA Patch Hub only if needed).
-- Scope rule: do not introduce a full follower framework in the first Serana iteration. If a framework is ever needed, treat it as a separate milestone.
+- Followers in general. Serana is the first anchor, but Milestone 4 is not Serana-only.
+- Baseline follower stack (current exports):
+  - Serana Dialogue Add-On
+  - Fuz Ro D-oh - Silent Voice
+  - I'm Glad You're Here
+  - SDA Patch Hub SE + SDA patch plugins as needed (example: Campfire / GYH / Wintersun)
+- Scope rule: do not introduce a full follower framework in the first follower iteration. If a framework is ever needed, treat it as a separate milestone.
 
 ## SDA permissions and AI policy (Milestone 4)
 - SDA voice recordings must not be used for AI training or AI voice generation.
 - SDA files must not be redistributed (Patch Pack policy: ship original VistulaRim files only).
+
+## Adults-only module policy (Milestone 4 optional, 18+)
+- Optional module, clearly labeled 18+.
+- Consent oriented and player controlled.
+- No redistribution of third party adult assets (Patch Pack policy still applies).
+- Keep the adult layer separate from the core stability baseline when possible (optional module mindset).
+
+## Animation generation tooling (decision)
+- Tooling may be installed (FNIS / Nemesis / Pandora), but do not mix outputs.
+- If outputs are generated, keep them in a dedicated MO2 output mod and place it with deliberate priority.
 
 
 ## Milestone 2 - gameplay identity

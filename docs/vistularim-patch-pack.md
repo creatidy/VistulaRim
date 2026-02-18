@@ -114,11 +114,11 @@ When planning the next iteration, request:
 
 - Milestone 3 is complete and tested (quest + content module). Note: see `baseline\` exports for the exact modlist delta.
 
-- Milestone 4 is the current focus (in progress): Followers (Serana-first).
+- Milestone 4 is the current focus (in progress): Followers (general) + optional adults-only animation layer (18+). Serana is the first anchor, but Milestone 4 is not Serana-only.
     
-- The Patch Pack’s original patch plugin is tracked in this repo at `mods\VistulaRim\Patch\VistulaRim_Patch.esp`.
+- The Patch Pack's original patch plugin is tracked in this repo at `mods\VistulaRim\Patch\VistulaRim_Patch.esp`.
     
-- The authoritative “installed mods/plugins” snapshot tracked in this repo is the MO2 exports under `baseline\`:
+- The authoritative "installed mods/plugins" snapshot tracked in this repo is the MO2 exports under `baseline\`:
   - `baseline\modlist.txt`
   - `baseline\plugins.txt`
   - `baseline\loadorder.txt`
@@ -253,7 +253,7 @@ Definition of done:
     
 - Play 5 minutes without crashes.
     
-- Record versions somewhere reproducible (optional). If you do this, keep it factual and sourced (don’t guess).
+- Record versions somewhere reproducible (optional). If you do this, keep it factual and sourced (don't guess).
 
 Status: complete (see `CHANGELOG.md` entry `[0.0.1]`).
     
@@ -305,21 +305,29 @@ Status: complete and tested. Note: see `baseline\` exports for the exact modlist
 
 Notes:
 - The current baseline already includes lightweight content (`Missives` and `The Forgotten City`) per the MO2 exports under `baseline\`.
-- Treat Milestone 3 as “content expansion + integration rules” rather than “first time adding any quest mods”.
+- Treat Milestone 3 as "content expansion + integration rules" rather than "first time adding any quest mods".
 
 
 ### Milestone 4: Followers
 
 Goal: add follower mods as a separate iteration.
 
-Current focus: Serana-first, stability-first, small batch.
+Current focus: followers in general (Serana is the first anchor), stability-first, small batch.
 
 Follower stack (Milestone 4):
 - Serana Dialogue Add-On (SDA)
 - Fuz Ro D-oh - Silent Voice
-- Optional: Serana Dialogue Add-On Patch Hub (only if needed)
+- I'm Glad You're Here
+- SDA Patch Hub SE
+- SDA patch plugins as needed (example: Campfire / GYH / Wintersun)
 
-Why this set: enrich Serana’s dialogue and companion experience while keeping the integration surface small (fewer conflicts, fewer moving parts).
+Why this set: enrich follower interaction while keeping the integration surface small (fewer conflicts, fewer moving parts). Serana is the first anchor because she is a common, well-tested companion target.
+
+Optional module (18+): adults-only animation framework layer
+- Purpose: mature roleplay and player choice.
+- Scope: optional add-on that does not change the core experience if not installed.
+- Policy: no redistribution of third party adult assets. Users download from original sources.
+- Testing: treat as a separate add-on module with separate sanity checks (menu opens, no obvious animation framework errors).
 
 Definition of done:
 
@@ -445,22 +453,26 @@ Prerequisites:
 
 ## Immediate next step
 
-In the new GPT thread, start with Milestone 4 planning (Followers, Serana-first):
+In the new GPT thread, start with Milestone 4 planning (Followers, general):
 
-1. Confirm the exact follower stack (SDA + Fuz + optional Patch Hub only if needed).
+1. Confirm the exact follower stack (Serana as the first anchor, plus any additional follower mods).
     
 2. Install the small batch and export updated `baseline\modlist.txt`, `baseline\plugins.txt`, and `baseline\loadorder.txt`.
     
-3. Run the workflow loop (LOOT sanity check → xEdit review → forward justified conflicts into `VistulaRim_Patch.esp` → playtest checklist).
+3. Run the workflow loop (LOOT sanity check -> xEdit review -> forward justified conflicts into `VistulaRim_Patch.esp` -> playtest checklist).
     
 4. Playtest checklist (Milestone 4):
    - Acquire Serana (Dawnguard start as appropriate for your test save).
    - Recruit and dismiss Serana.
    - Travel with Serana across multiple cells.
-   - Combat with Serana (at least 1–2 fights).
+   - Combat with Serana (at least 1-2 fights).
    - Save/load with Serana recruited and dismissed.
+
+5. Optional add-on module (18+): adults-only animation framework layer
+   - Install as a separate, clearly labeled optional module.
+   - Sanity check: OStim menu opens, no obvious animation framework errors.
     
-5. Update `CHANGELOG.md`, `README.md`, and `docs/decisions.md` (including any new policies, and the verification results).
+6. Update `CHANGELOG.md`, `README.md`, and `docs/decisions.md` (including any new policies, and the verification results).
     
 
 If you have already chosen the first 10 to 30 mods for VistulaRim Core, paste the names into the new thread and ask GPT to produce:
