@@ -75,16 +75,22 @@ Milestone 4 in progress (current focus): Followers (general). Serana is the firs
 - Fuz Ro D-oh - Silent Voice
 - I'm Glad You're Here
 - SDA Patch Hub SE
+- Ashe - Crystal Heart (plus SDA x Ashe banter integration)
 - SDA patches (plugins):
   - SDA Campfire Patch.esp
   - SDA GYH Patch.esp
   - SDA Wintersun Patch.esp
+  - Ashe and Serana Banter Patch.esp
 
 ### Added (optional adults-only layer, 18+)
 - OStim Standalone (plugin: OStim.esp)
 - Open Animation Replacer
 - Animation Queue Fix
 - Paired Animation Improvements
+
+### Added (frameworks and fixes)
+- Campfire (plugin: Campfire.esm)
+- PapyrusUtil SE
 
 ### Installed tooling (animation generation)
 - FNIS

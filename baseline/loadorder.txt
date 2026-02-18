@@ -19,6 +19,8 @@ Odin - Skyrim Magic Overhaul.esp
 Wintersun - Faiths of Skyrim.esp
 Wildcat - Combat of Skyrim.esp
 Extended Encounters.esp
+Ashe - Fire and Blood.esp
+Ashe and Serana Banter Patch.esp
 Immersive Patrols II.esp
 ForgottenCity.esp
 Missives.esp
@@ -31,6 +33,8 @@ OStim.esp
 ImGladYoureHere.esp
 SDA GYH Patch.esp
 SDA Wintersun Patch.esp
+Ashe RCO Patch.esp
+Ashe - SMP_Hair.esp
 Vokrii - Minimalistic Perks of Skyrim.esp
 Odin - Vokrii Compatibility Patch.esp
 VistulaRim_Patch.esp

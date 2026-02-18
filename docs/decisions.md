@@ -37,6 +37,7 @@ Gameplay identity (Milestone 2 baseline):
 - Followers in general. Serana is the first anchor, but Milestone 4 is not Serana-only.
 - Baseline follower stack (current exports):
   - Serana Dialogue Add-On
+  - Ashe - Crystal Heart (plus SDA x Ashe banter integration)
   - Fuz Ro D-oh - Silent Voice
   - I'm Glad You're Here
   - SDA Patch Hub SE + SDA patch plugins as needed (example: Campfire / GYH / Wintersun)

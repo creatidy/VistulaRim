@@ -316,6 +316,7 @@ Current focus: followers in general (Serana is the first anchor), stability-firs
 
 Follower stack (Milestone 4):
 - Serana Dialogue Add-On (SDA)
+- Ashe - Crystal Heart (plus SDA x Ashe banter integration)
 - Fuz Ro D-oh - Silent Voice
 - I'm Glad You're Here
 - SDA Patch Hub SE
