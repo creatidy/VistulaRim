@@ -5,11 +5,10 @@
 - Elysium is a private reference only, never a source of files.
 - First product is a Patch Pack: original patch plugin + INIs + original configs + docs (no third party assets).
 
-## Milestones (status)
-- Milestone 1: complete and tested.
-- Milestone 2: complete and tested.
-- Milestone 3: complete and tested (quest + content module). Note: see `baseline/` exports for the exact modlist delta.
-- Milestone 4 (current focus): Followers (general) + optional adults-only animation layer (18+).
+## Project status
+
+- Milestone history and current status are tracked in `CHANGELOG.md`.
+- Current focus: Milestone 4 (Followers) + optional adults-only animation layer (18+).
 
 ## Stability and workflow
 - Stability is the primary KPI.
@@ -56,17 +55,6 @@ Gameplay identity (Milestone 2 baseline):
 ## Animation generation tooling (decision)
 - Tooling may be installed (FNIS / Nemesis / Pandora), but do not mix outputs.
 - If outputs are generated, keep them in a dedicated MO2 output mod and place it with deliberate priority.
-
-
-## Milestone 2 - gameplay identity
-
-- Direction: Elysium-inspired feel (rich, immersive, live world) but not a 1:1 copy.
-- Goal: more fun while keeping balance and avoiding feature creep.
-- Combat baseline: Wildcat.
-- Perk overhaul: Vokrii (balanced, vanilla-plus).
-- Magic: Odin + official Vokrii compatibility patch.
-- Living world: AI Overhaul SSE + Extended Encounters + Immersive Patrols II.
-- Scope boundary: no progression/loot/crafting mega-systems in Milestone 2 (postponed by design).
 
 ## Patch plugin policy
 

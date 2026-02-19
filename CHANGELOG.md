@@ -1,5 +1,48 @@
 # Changelog
 
+This changelog is the source of truth for milestone history and the project process.
+
+## Process (how changes are made)
+
+Primary KPI: stability. Every change must be testable and reversible.
+
+Iteration loop:
+
+1. Pick 1 goal for the iteration.
+2. Add a small batch of mods (prefer 1 to 5).
+3. Run LOOT only as a sanity check.
+4. Use xEdit to identify conflicts.
+5. Resolve conflicts by forwarding into the patch plugin.
+6. Run the playtest checklist.
+7. Update documentation and baseline exports.
+
+Minimum playtest checklist:
+
+- Boot to menu
+- Start a new game (or load the clean post-Helgen test save)
+- Open inventory, magic menu, map
+- Walk outside, engage in 1 combat
+- Save, load
+
+Repo/documentation rules live in `docs/vistularim-patch-pack.md` (including where to put milestones, and the "do not duplicate paths" rule).
+
+## Milestones (definition and status)
+
+Status as of 2026-02-19:
+
+- Milestone 0: complete (migration-friendly path conventions and centralized path tracking).
+- Milestone 1: complete (core boot/new game baseline).
+- Milestone 2: complete (gameplay identity baseline).
+- Milestone 3: complete (quest + content module).
+- Milestone 4: in progress (Followers; optional adults-only animation layer, 18+).
+- Milestone 5: planned (audio and weather).
+- Milestone 6: planned (generated outputs policy).
+
+Notes:
+
+- Authoritative repo paths and locations are centralized in `paths.md`.
+- The installed-mod snapshot is tracked as MO2 export text files; if their location changes later, update `paths.md` and the references in docs (do not duplicate path lists in multiple places).
+
 ## [0.0.1] - 2026-02-18
 
 Milestone 1 complete: VistulaRim Core 0.0.1 (stable boot, new game, 5 minutes playtest). Also started Milestone 2 combat baseline.
@@ -54,7 +97,7 @@ Milestone 2 complete: Gameplay module (first serious identity).
 
 Milestone 3 complete: Quest and content module (content expansion without destabilizing the base).
 
-Note: see `baseline/` exports for the exact modlist delta.
+Note: see the MO2 exports referenced in `paths.md` for the exact modlist delta.
 
 ### Added
 - Content (baseline snapshot):

@@ -12,6 +12,9 @@ _ResourcePack.esl
 unofficial skyrim special edition patch.esp
 Campfire.esm
 SkyUI_SE.esp
+Audio Overhaul Skyrim.esp
+Immersive Sounds - Compendium.esp
+TrueStormsSE.esp
 MCMHelper.esp
 AI Overhaul.esp
 SeranaDialogAddon.esp
@@ -20,6 +23,7 @@ Wintersun - Faiths of Skyrim.esp
 Wildcat - Combat of Skyrim.esp
 Extended Encounters.esp
 Ashe - Fire and Blood.esp
+Ashe RCO Patch.esp
 Ashe and Serana Banter Patch.esp
 Immersive Patrols II.esp
 ForgottenCity.esp
@@ -33,8 +37,36 @@ OStim.esp
 ImGladYoureHere.esp
 SDA GYH Patch.esp
 SDA Wintersun Patch.esp
-Ashe RCO Patch.esp
 Ashe - SMP_Hair.esp
+Cathedral Weathers.esp
+dD - Enhanced Blood Main.esp
+Rumble - Weapons.esp
+Rumble - Beasts.esp
+Rumble - Items.esp
+Rumble - Items - ISC Patch.esp
+Rumble - Weapons - AOS Patch.esp
+Rumble - Weapons - ISC.esp
+Rumble - Jumping.esp
+Rumble - Crafting.esp
+Rumble - Crafting - ISC Patch.esp
+Rumble - Jumping - ISC Patch.esp
+Rumble - Swimming.esp
+Rumble - UI.esp
+Rumble - UI - Memospore.esp
+Rumble - UI - ISC Patch.esp
+AOS_EBT Patch.esp
+Rumble - Jumping - AOS Patch.esp
+Rumble - Swimming - AOS Patch.esp
+Rumble - Crafting - AOS Patch.esp
+Reverb Interior Sounds Expansion.esp
+TrueStormsSE_AOS.esp
+Reverb Interior Sounds Expansion_VolumeSlider_Rain.esp
+Reverb Interior Sounds Expansion_VolumeSlider_Thunder.esp
+AcousticTemplateFixes.esp
+AcousticTemplateFixes_CC_Farming.esp
+AcousticTemplateFixes_USSEP.esp
+AcousticTemplateFixes_ReverbInteriorSounds.esp
+AcousticTemplateFixes_CC_Seducers.esp
 Vokrii - Minimalistic Perks of Skyrim.esp
 Odin - Vokrii Compatibility Patch.esp
 VistulaRim_Patch.esp
