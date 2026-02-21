@@ -37,7 +37,7 @@ Status as of 2026-02-21:
 - Milestone 4: complete (Followers; optional adults-only animation layer, 18+).
 - Milestone 5: complete (audio and weather).
 - Milestone 6: complete (generated outputs policy).
-- Milestone 7: in progress (fixes and utilities baseline).
+- Milestone 7: complete (fixes and utilities baseline).
 - Milestone 8: planned (lighting and water baseline; no ENB requirement).
 - Milestone 9: planned (LOD and world generation workflow; user-generated).
 - Milestone 10: planned (UI/HUD pass).
@@ -105,6 +105,28 @@ Definition of done:
 - No audio conflicts that affect core gameplay.
 - Weather changes do not break lighting dramatically.
 - Baseline stability remains unchanged (boot, new game/load, save/load).
+
+## [0.0.7] - 2026-02-22
+
+Milestone 7 complete: Fixes and utilities baseline
+
+### Added
+- Crash Logger (SSE AE VR - PDB support) (AE build)
+- More Informative Console
+- Scrambled Bugs
+- Bug Fixes SSE
+- Actor Limit Fix
+
+### Verified
+- Minimum playtest checklist completed and stable (boot, load/new game, inventory/magic/map, 1 combat, save, load).
+- No new crash loop introduced.
+- Save/load baseline unchanged.
+
+### Notes
+- Runtime: Skyrim SE 1.6.1170.0.8; SKSE64 2.2.6.
+- Crash Logger: crash logs appear in `Documents\My Games\Skyrim Special Edition\SKSE` and help diagnose CTDs.
+- More Informative Console: console shows extra object info when clicking things.
+- Scrambled Bugs / Bug Fixes SSE / Actor Limit Fix: installed as fixes; no gameplay identity change intended.
 
 ## [0.0.1] - 2026-02-18
 

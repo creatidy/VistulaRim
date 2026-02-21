@@ -44,15 +44,15 @@ Immersive Sounds - Compendium.esp
 TrueStormsSE.esp
 AI Overhaul.esp
 SeranaDialogAddon.esp
-Reverb Interior Sounds Expansion.esp
-AcousticTemplateFixes.esp
-AcousticTemplateFixes_CC_Farming.esp
 Odin - Skyrim Magic Overhaul.esp
 Wintersun - Faiths of Skyrim.esp
 Ashe - Fire and Blood.esp
 Ashe RCO Patch.esp
 Rumble - UI.esp
 Rumble - UI - Memospore.esp
+Reverb Interior Sounds Expansion.esp
+AcousticTemplateFixes.esp
+AcousticTemplateFixes_CC_Farming.esp
 MCMHelper.esp
 Wildcat - Combat of Skyrim.esp
 Extended Encounters.esp

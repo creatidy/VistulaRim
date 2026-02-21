@@ -39,25 +39,7 @@ It must not include:
 - Third party assets
 - Large generated outputs that embed third party assets
 
-## Current milestone (in progress): Milestone 7 - Fixes and utilities baseline (Elysium-inspired)
-
-Goal: adopt high-value fixes/utilities that improve stability, diagnostics, and quality-of-life without changing the core gameplay identity.
-
-Scope examples (pick a small batch per iteration):
-
-- Engine/runtime stability helpers (SKSE plugins that reduce known bug surface).
-- Diagnostics and troubleshooting (crash logging, more-informative console).
-- UI helpers that reduce friction (MCM Helper-class tooling).
-
-Definition of done:
-
-- No new crash loop introduced.
-- Save/load baseline unchanged.
-- Any new tools have a documented "how to verify it's working" note.
-
-## Future milestones (planned)
-
-### Milestone 8 - Lighting and water baseline (no ENB requirement)
+## Current milestone (in progress): Milestone 8 - Lighting and water baseline (no ENB requirement)
 
 Goal: improve visual consistency with measurable performance impact and without committing to an ENB path.
 
@@ -70,6 +52,8 @@ Definition of done:
 - Interiors/exteriors readability improved (no widespread "too dark / too bright" regressions).
 - Water visuals improved with no obvious seam/flow issues in common locations.
 - Baseline stability remains unchanged (boot, new game/load, save/load).
+
+## Future milestones (planned)
 
 ### Milestone 9 - LOD and world generation workflow (user-generated)
 

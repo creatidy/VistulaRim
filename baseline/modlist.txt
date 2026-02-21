@@ -37,6 +37,9 @@
 +SkyUI
 +MCM Helper
 -UI_separator
++Actor Limit Fix
++Bug Fixes SSE
++Scrambled Bugs
 +EngineFixes - skse64 Preloader
 +EngineFixes
 +Spell Perk Item Distributor
@@ -44,8 +47,9 @@
 +powerofthree's Tweaks
 +MergeMapper
 +PapyrusUtil SE - Modders Scripting Utility Functions
++More Informative Console
++Crash Logger SSE AE VR - PDB support
 +Address Library for SKSE Plugins
-+VR Address Library for SKSEVR
 -Frameworks_separator
 +Shrine of Vedir I BFCO MCO SCAR Greatsword Moveset I Sswaye's Productions
 +OStim Standalone - Advanced Adult Animation Framework

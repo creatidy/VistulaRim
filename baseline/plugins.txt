@@ -10,13 +10,13 @@ Rumble - UI - Memospore.esp
 *TrueStormsSE.esp
 *AI Overhaul.esp
 *SeranaDialogAddon.esp
-*Reverb Interior Sounds Expansion.esp
-*AcousticTemplateFixes.esp
-AcousticTemplateFixes_CC_Farming.esp
 *Odin - Skyrim Magic Overhaul.esp
 *Wintersun - Faiths of Skyrim.esp
 *Ashe - Fire and Blood.esp
 *Rumble - UI.esp
+*Reverb Interior Sounds Expansion.esp
+*AcousticTemplateFixes.esp
+AcousticTemplateFixes_CC_Farming.esp
 *MCMHelper.esp
 *Wildcat - Combat of Skyrim.esp
 *Extended Encounters.esp
