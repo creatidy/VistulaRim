@@ -25,7 +25,7 @@ It does not include:
 
 ### Requirements
 
-- Skyrim Special Edition
+- Skyrim Special Edition with the **Anniversary Edition** upgrade (AE / Creation Club bundle). The current baseline assumes AE Creation Club content is installed/enabled.
 - Mod Organizer 2
 - SKSE matching your Skyrim runtime
 
@@ -59,7 +59,7 @@ See `CHANGELOG.md` for milestone history and what changed per release.
 
 Local development requirements:
 
-- Skyrim Special Edition (Steam recommended)
+- Skyrim Special Edition with the **Anniversary Edition** upgrade (Steam recommended). The current baseline assumes AE Creation Club content is installed/enabled.
 - Mod Organizer 2
 - xEdit (SSEEdit) for conflict inspection and forwardings
 - LOOT (sanity checks only)

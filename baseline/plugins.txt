@@ -1,6 +1,5 @@
 # This file is used by Skyrim to keep track of your downloaded content.
 # Please do not modify this file.
-AcousticTemplateFixes_CC_Farming.esp
 Ashe RCO Patch.esp
 Rumble - UI - Memospore.esp
 *unofficial skyrim special edition patch.esp
@@ -9,14 +8,18 @@ Rumble - UI - Memospore.esp
 *Audio Overhaul Skyrim.esp
 *Immersive Sounds - Compendium.esp
 *TrueStormsSE.esp
-*MCMHelper.esp
 *AI Overhaul.esp
 *SeranaDialogAddon.esp
+*Reverb Interior Sounds Expansion.esp
+*AcousticTemplateFixes.esp
+AcousticTemplateFixes_CC_Farming.esp
 *Odin - Skyrim Magic Overhaul.esp
 *Wintersun - Faiths of Skyrim.esp
+*Ashe - Fire and Blood.esp
+*Rumble - UI.esp
+*MCMHelper.esp
 *Wildcat - Combat of Skyrim.esp
 *Extended Encounters.esp
-*Ashe - Fire and Blood.esp
 *Ashe and Serana Banter Patch.esp
 *Immersive Patrols II.esp
 *ForgottenCity.esp
@@ -44,17 +47,14 @@ Rumble - UI - Memospore.esp
 *Rumble - Crafting - ISC Patch.esp
 *Rumble - Jumping - ISC Patch.esp
 *Rumble - Swimming.esp
-*Rumble - UI.esp
 *Rumble - UI - ISC Patch.esp
 *AOS_EBT Patch.esp
 *Rumble - Jumping - AOS Patch.esp
 *Rumble - Swimming - AOS Patch.esp
 *Rumble - Crafting - AOS Patch.esp
-*Reverb Interior Sounds Expansion.esp
 *TrueStormsSE_AOS.esp
 *Reverb Interior Sounds Expansion_VolumeSlider_Rain.esp
 *Reverb Interior Sounds Expansion_VolumeSlider_Thunder.esp
-*AcousticTemplateFixes.esp
 *AcousticTemplateFixes_USSEP.esp
 *AcousticTemplateFixes_ReverbInteriorSounds.esp
 *AcousticTemplateFixes_CC_Seducers.esp

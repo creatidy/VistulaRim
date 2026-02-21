@@ -4,10 +4,37 @@ Update.esm
 Dawnguard.esm
 HearthFires.esm
 Dragonborn.esm
+ccasvsse001-almsivi.esm
 ccbgssse001-fish.esm
+ccbgssse005-goldbrand.esl
+ccbgssse011-hrsarmrelvn.esl
+ccbgssse012-hrsarmrstl.esl
+ccbgssse020-graycowl.esl
 ccqdrsse001-survivalmode.esl
 ccbgssse037-curios.esl
+ccbgssse038-bowofshadows.esl
+ccbgssse050-ba_daedric.esl
+ccbgssse052-ba_iron.esl
+ccbgssse054-ba_orcish.esl
+ccbgssse059-ba_dragonplate.esl
+ccbgssse061-ba_dwarven.esl
+ccbgssse056-ba_silver.esl
+ccbgssse055-ba_orcishscaled.esl
+ccbgssse053-ba_leather.esl
+ccbgssse066-staves.esl
+ccbgssse067-daedinv.esm
+ccbgssse068-bloodfall.esl
+ccbgssse069-contest.esl
+ccvsvsse003-necroarts.esl
+ccvsvsse004-beafarmer.esl
 ccbgssse025-advdsgs.esm
+ccrmssse001-necrohouse.esl
+ccedhsse003-redguard.esl
+cceejsse004-hall.esl
+cceejsse005-cave.esm
+cckrtsse001_altar.esl
+cccbhsse001-gaunt.esl
+ccafdsse001-dwesanctuary.esm
 _ResourcePack.esl
 unofficial skyrim special edition patch.esp
 Campfire.esm
@@ -15,15 +42,20 @@ SkyUI_SE.esp
 Audio Overhaul Skyrim.esp
 Immersive Sounds - Compendium.esp
 TrueStormsSE.esp
-MCMHelper.esp
 AI Overhaul.esp
 SeranaDialogAddon.esp
+Reverb Interior Sounds Expansion.esp
+AcousticTemplateFixes.esp
+AcousticTemplateFixes_CC_Farming.esp
 Odin - Skyrim Magic Overhaul.esp
 Wintersun - Faiths of Skyrim.esp
-Wildcat - Combat of Skyrim.esp
-Extended Encounters.esp
 Ashe - Fire and Blood.esp
 Ashe RCO Patch.esp
+Rumble - UI.esp
+Rumble - UI - Memospore.esp
+MCMHelper.esp
+Wildcat - Combat of Skyrim.esp
+Extended Encounters.esp
 Ashe and Serana Banter Patch.esp
 Immersive Patrols II.esp
 ForgottenCity.esp
@@ -51,19 +83,14 @@ Rumble - Crafting.esp
 Rumble - Crafting - ISC Patch.esp
 Rumble - Jumping - ISC Patch.esp
 Rumble - Swimming.esp
-Rumble - UI.esp
-Rumble - UI - Memospore.esp
 Rumble - UI - ISC Patch.esp
 AOS_EBT Patch.esp
 Rumble - Jumping - AOS Patch.esp
 Rumble - Swimming - AOS Patch.esp
 Rumble - Crafting - AOS Patch.esp
-Reverb Interior Sounds Expansion.esp
 TrueStormsSE_AOS.esp
 Reverb Interior Sounds Expansion_VolumeSlider_Rain.esp
 Reverb Interior Sounds Expansion_VolumeSlider_Thunder.esp
-AcousticTemplateFixes.esp
-AcousticTemplateFixes_CC_Farming.esp
 AcousticTemplateFixes_USSEP.esp
 AcousticTemplateFixes_ReverbInteriorSounds.esp
 AcousticTemplateFixes_CC_Seducers.esp

@@ -73,3 +73,30 @@
 *DLC: Dawnguard
 *DLC: Dragonborn
 *DLC: HearthFires
+*Creation Club: ccafdsse001-dwesanctuary
+*Creation Club: ccasvsse001-almsivi
+*Creation Club: ccbgssse005-goldbrand
+*Creation Club: ccbgssse011-hrsarmrelvn
+*Creation Club: ccbgssse012-hrsarmrstl
+*Creation Club: ccbgssse020-graycowl
+*Creation Club: ccbgssse038-bowofshadows
+*Creation Club: ccbgssse050-ba_daedric
+*Creation Club: ccbgssse052-ba_iron
+*Creation Club: ccbgssse053-ba_leather
+*Creation Club: ccbgssse054-ba_orcish
+*Creation Club: ccbgssse055-ba_orcishscaled
+*Creation Club: ccbgssse056-ba_silver
+*Creation Club: ccbgssse059-ba_dragonplate
+*Creation Club: ccbgssse061-ba_dwarven
+*Creation Club: ccbgssse066-staves
+*Creation Club: ccbgssse067-daedinv
+*Creation Club: ccbgssse068-bloodfall
+*Creation Club: ccbgssse069-contest
+*Creation Club: cccbhsse001-gaunt
+*Creation Club: ccedhsse003-redguard
+*Creation Club: cceejsse004-hall
+*Creation Club: cceejsse005-cave
+*Creation Club: cckrtsse001_altar
+*Creation Club: ccrmssse001-necrohouse
+*Creation Club: ccvsvsse003-necroarts
+*Creation Club: ccvsvsse004-beafarmer
