@@ -1,0 +1,192 @@
+# Generated outputs policy
+
+This repo ships a Patch Pack only: original VistulaRim patches, configuration, and documentation.
+It does not ship third party mods, third party assets, or tool-generated outputs.
+
+This policy applies to both players (what to generate locally) and maintainers (what must never be committed or released).
+
+If you need repo path conventions, see `paths.md` (single source of truth).
+
+## What we ship
+
+The Patch Pack may include only VistulaRim-owned files, for example:
+
+- VistulaRim patch plugin(s) and supporting config (example: `VistulaRim_Patch.esp`)
+- Profile INIs and original presets created for VistulaRim
+- Documentation
+
+## What we do not ship
+
+We do not redistribute:
+
+- Any third party mod files or assets
+- Any "generated outputs" created by tools that process third party mod assets
+- Tool caches, shader caches, crash logs, or other transient artifacts
+
+In early Patch Pack versions, all generated outputs must be produced locally by the user.
+
+## Definition: generated outputs
+
+"Generated outputs" are files created by tools that build runtime assets from your installed mod stack.
+They are derived from third party assets and can make file provenance and redistributability unclear.
+
+Common examples (not exhaustive):
+
+- DynDOLOD outputs (plugins plus mesh/texture outputs)
+- TexGen outputs (generated textures)
+- xLODGen outputs (terrain/object LOD meshes and textures)
+- Grass cache outputs (pre-cached grass data)
+- BodySlide outputs (generated meshes and textures)
+- Nemesis/FNIS/Pandora outputs (generated behavior files and animation integration artifacts)
+- Tool caches (example: shader caches) and any crash logs or dumps
+- xEdit backups and caches (example: "SSEEdit Backups")
+
+## Standard MO2 workflow (tool-agnostic)
+
+Use this same flow for every generator tool:
+
+1) Run the tool through MO2 (add it as an MO2 executable).
+2) Let it write to MO2's Overwrite.
+3) Immediately move the new files out of Overwrite into a dedicated MO2 mod.
+4) Name the output mod clearly and consistently.
+5) Keep Overwrite close to empty.
+
+Recommended naming convention for output mods:
+
+- `VR - Output - <ToolName>`
+  - Examples: `VR - Output - xLODGen`, `VR - Output - TexGen`, `VR - Output - DynDOLOD`
+
+Rule of thumb:
+
+- If the files must persist for normal gameplay, they belong in a dedicated output mod.
+- If they are caches/logs/backups, delete them after validation (do not keep them as a mod).
+
+## Tool notes and quick sanity checks
+
+These are minimal, practical notes to keep the workflow consistent.
+Do not hardcode file paths in your setup docs; rely on the MO2 Overwrite workflow above.
+
+### xLODGen
+
+What it produces:
+- Terrain and object LOD meshes and textures derived from your current load order.
+
+Where it appears:
+- MO2 Overwrite (if launched through MO2).
+
+What to do:
+- Move the new files from Overwrite into `VR - Output - xLODGen`.
+
+Quick sanity checks:
+- Confirm the output mod is enabled in MO2.
+- In game, check a few wide vistas for obvious missing terrain LOD, seams, or purple textures.
+
+### TexGen
+
+What it produces:
+- Generated LOD textures used by DynDOLOD (derived from installed assets).
+
+Where it appears:
+- MO2 Overwrite.
+
+What to do:
+- Move the new files from Overwrite into `VR - Output - TexGen`.
+
+Quick sanity checks:
+- Confirm the output mod is enabled and placed where DynDOLOD can see it.
+- In game, look for reduced "flat billboard" look and fewer mismatched distant textures.
+
+### DynDOLOD
+
+What it produces:
+- Plugins plus mesh/texture outputs for distant object LOD (derived from installed assets).
+
+Where it appears:
+- MO2 Overwrite.
+
+What to do:
+- Move the new files from Overwrite into `VR - Output - DynDOLOD`.
+- Enable the output mod and ensure the generated plugin(s) are enabled in the right order for your setup.
+
+Quick sanity checks:
+- In game, check a few city exteriors and forest edges for missing distant objects or obvious pop-in regressions.
+- If DynDOLOD includes an MCM in your setup, confirm it reports expected versions and no errors.
+
+### Grass cache (if used)
+
+What it produces:
+- Pre-cached grass data derived from the current grass mods and load order.
+
+Where it appears:
+- MO2 Overwrite.
+
+What to do:
+- Move the new files from Overwrite into `VR - Output - Grass Cache`.
+
+Quick sanity checks:
+- In game, confirm grass density looks consistent and you do not see obvious missing grass in common locations.
+- Confirm performance and loading behavior matches expectations for your machine.
+
+### BodySlide
+
+What it produces:
+- Generated meshes (and sometimes textures) based on BodySlide presets and installed outfits.
+
+Where it appears:
+- MO2 Overwrite (if BodySlide is run through MO2).
+
+What to do:
+- Move the new files from Overwrite into `VR - Output - BodySlide`.
+
+Quick sanity checks:
+- Confirm the output mod is enabled and wins conflicts where expected.
+- In game, confirm player/NPC bodies and outfits match the intended preset (no mismatched seams).
+
+### Nemesis / FNIS / Pandora
+
+What it produces:
+- Generated behavior files and related artifacts based on your animation mods.
+
+Where it appears:
+- MO2 Overwrite (if run through MO2).
+
+What to do:
+- Pick exactly one generator for your setup (do not mix outputs).
+- Move the new files from Overwrite into `VR - Output - Animations (Generated)`.
+
+Quick sanity checks:
+- The generator reports success with no missing behavior errors.
+- In game, test a few common animation actions (walk/run, weapon draw, sneak) for obvious T-poses or frozen states.
+
+### Tool caches, shader caches, logs, dumps, backups
+
+What they are:
+- Transient artifacts that are useful for diagnostics but should not be shipped or committed.
+
+What to do:
+- Delete after validation and troubleshooting.
+- If you need to share logs for support, do it out of band (do not add to the Patch Pack repo).
+
+## Repo hygiene checks (maintainers)
+
+Before tagging a release, run checks to ensure no generated outputs are tracked by git.
+
+Preferred check (fast, explicit):
+
+- Run `scripts/check-no-generated-outputs.sh` (from a shell that can run sh, such as Git Bash).
+
+Additional quick audits:
+
+- Verify the working tree is clean (no accidental new files staged or untracked):
+  - `git status --porcelain`
+- Verify no suspicious output directories or tool names are tracked:
+  - `git ls-files | grep -Ei "DynDOLOD|TexGen|xLODGen|GrassCache|Nemesis|FNIS|Pandora|BodySlide|ShaderCache|Overwrite|SSEEdit Backups|NetScriptFramework|Crash"`
+- Verify no obvious logs or dumps are tracked:
+  - `git ls-files | grep -Ei "\.log$|\.dmp$"`
+- Verify no obvious generated asset types or archives are tracked (manual review):
+  - `git ls-files | grep -Ei "\.(bsa|ba2|dds|nif|hkx|fuz|xwm|wav|lip|7z|zip|rar)$"`
+
+If any files are found:
+
+- Remove them with `git rm --cached` (do not keep them tracked).
+- Add or refine `.gitignore` patterns so it does not happen again.

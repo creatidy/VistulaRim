@@ -1,0 +1,26 @@
+# Generated outputs policy:
+# - This repo must not ship or commit tool-generated outputs.
+# - Keep ignores conservative (do not ignore broad game asset paths like meshes/ or textures/).
+
+## Common generator output folders (when someone accidentally points a tool at the repo)
+**/DynDOLOD_Output/
+**/TexGen_Output/
+**/xLODGen_Output/
+**/GrassCache/
+**/ShaderCache/
+**/Overwrite/
+**/overwrite/
+
+## Common xEdit backup folders (transient)
+**/SSEEdit Backups/
+**/TES5Edit Backups/
+
+## Diagnostics artifacts (never ship)
+**/Crash Logs/
+**/NetScriptFramework/
+*.log
+*.dmp
+
+## Optional: if you use the recommended MO2 output mod naming, ignore those directories too
+mods/VR - Output - */
+

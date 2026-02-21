@@ -25,7 +25,8 @@ It does not include:
 
 ### Requirements
 
-- Skyrim Special Edition with the **Anniversary Edition** upgrade (AE / Creation Club bundle). The current baseline assumes AE Creation Club content is installed/enabled.
+- Skyrim Special Edition with the **Anniversary Edition** upgrade installed.
+  - Creations policy for Patch Pack development: keep enabled only the baseline 4 Creations (Fishing, Survival Mode, Saints and Seducers, Rare Curios). See `docs/decisions.md`.
 - Mod Organizer 2
 - SKSE matching your Skyrim runtime
 
@@ -42,7 +43,7 @@ Optional (useful for troubleshooting / power users):
 4. Enable the VistulaRim patch plugin(s).
 5. (Optional) Run LOOT as a sanity check, then launch and playtest.
 
-Note: Generated outputs (LOD, BodySlide outputs, etc) are not redistributed in early versions. If generation steps become required, they will be documented as post-install steps.
+Note: Generated outputs (LOD, BodySlide outputs, etc) are not redistributed in early versions. See `docs/generated-outputs-policy.md` for the standard MO2 workflow if you need to generate outputs locally.
 
 ### Current status
 
@@ -56,10 +57,12 @@ See `CHANGELOG.md` for milestone history and what changed per release.
 - Process and milestone history: `CHANGELOG.md`
 - Current and future milestone planning: `docs/vistularim-patch-pack.md`
 - Reasoning, motivations, and policy decisions: `docs/decisions.md`
+- Generated outputs policy and repo guardrails: `docs/generated-outputs-policy.md`
 
 Local development requirements:
 
-- Skyrim Special Edition with the **Anniversary Edition** upgrade (Steam recommended). The current baseline assumes AE Creation Club content is installed/enabled.
+- Skyrim Special Edition with the **Anniversary Edition** upgrade installed (Steam recommended).
+  - Creations policy for Patch Pack development: keep enabled only the baseline 4 Creations (Fishing, Survival Mode, Saints and Seducers, Rare Curios). See `docs/decisions.md`.
 - Mod Organizer 2
 - xEdit (SSEEdit) for conflict inspection and forwardings
 - LOOT (sanity checks only)

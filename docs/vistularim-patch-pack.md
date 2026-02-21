@@ -48,6 +48,16 @@ Policy:
 - Provide instructions for users to generate outputs locally.
 - If moving to a full installer later, treat outputs as a dedicated topic with explicit rules and permissions checks.
 
+Primary doc:
+
+- `docs/generated-outputs-policy.md`
+
+Definition of done (Milestone 6):
+
+- `docs/generated-outputs-policy.md` exists and is linked from `README.md` and this milestone section.
+- Repo guardrails exist to prevent accidental commits (at minimum: `.gitignore` updates).
+- A simple pre-release audit is documented (commands and/or a script maintainers can run).
+
 ## Future milestones (planned)
 
 ### Milestone 7 - Fixes and utilities baseline (Elysium-inspired)

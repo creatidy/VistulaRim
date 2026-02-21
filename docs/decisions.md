@@ -57,6 +57,19 @@ Gameplay identity (Milestone 2 baseline):
 - Tooling may be installed (FNIS / Nemesis / Pandora), but do not mix outputs.
 - If outputs are generated, keep them in a dedicated MO2 output mod and place it with deliberate priority.
 
+## Generated outputs policy (Milestone 6)
+
+- No generated outputs are distributed in early Patch Pack versions.
+- All generated outputs must be produced locally by the user (or maintainer) in MO2.
+- Overwrite is a temporary bucket only. Persistent outputs must be moved into dedicated MO2 output mods.
+- This repo must not commit generated outputs. Use `.gitignore` plus a pre-release audit (see `docs/generated-outputs-policy.md`).
+
+Rationale:
+
+- Clear file provenance (what is VistulaRim-owned vs derived from third party assets).
+- Redistributability and permissions safety.
+- Fewer support problems caused by stale or mismatched outputs.
+
 ## Patch plugin policy
 
 - VistulaRim_Patch.esp must load last and is used only for explicit, justified forwardings.
