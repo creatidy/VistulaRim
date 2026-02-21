@@ -28,20 +28,83 @@ Repo/documentation rules live in `docs/vistularim-patch-pack.md` (including wher
 
 ## Milestones (definition and status)
 
-Status as of 2026-02-19:
+Status as of 2026-02-21:
 
 - Milestone 0: complete (migration-friendly path conventions and centralized path tracking).
 - Milestone 1: complete (core boot/new game baseline).
 - Milestone 2: complete (gameplay identity baseline).
 - Milestone 3: complete (quest + content module).
-- Milestone 4: in progress (Followers; optional adults-only animation layer, 18+).
-- Milestone 5: planned (audio and weather).
-- Milestone 6: planned (generated outputs policy).
+- Milestone 4: complete (Followers; optional adults-only animation layer, 18+).
+- Milestone 5: complete (audio and weather).
+- Milestone 6: in progress (generated outputs policy).
+- Milestone 7: planned (fixes and utilities baseline).
+- Milestone 8: planned (lighting and water baseline; no ENB requirement).
+- Milestone 9: planned (LOD and world generation workflow; user-generated).
+- Milestone 10: planned (UI/HUD pass).
+- Milestone 11: planned (progression/economy/crafting systems).
+- Milestone 12: planned (performance and FPS hygiene).
+- Milestone 13: planned (major content module selection).
+- Milestone 14: planned (cleaning and Wabbajack-friendly policy).
+- Milestone 15: planned (widescreen support).
+- Milestone 16: planned (VR support).
 
 Notes:
 
 - Authoritative repo paths and locations are centralized in `paths.md`.
 - The installed-mod snapshot is tracked as MO2 export text files; if their location changes later, update `paths.md` and the references in docs (do not duplicate path lists in multiple places).
+
+### Milestone 4 (complete): Followers (with optional 18+ module)
+
+Goal: add follower mods as a separate iteration (stability-first, small batch). Serana is the first anchor, but Milestone 4 is not Serana-only.
+
+Follower stack (baseline exports):
+
+- Serana Dialogue Add-On (SDA)
+- Ashe - Crystal Heart (plus SDA x Ashe banter integration)
+- Fuz Ro D-oh - Silent Voice
+- I'm Glad You're Here
+- SDA Patch Hub SE
+- SDA patch plugins as needed (example: Campfire / GYH / Wintersun)
+
+Optional module (18+): adults-only animation framework layer
+
+- Purpose: mature roleplay and player choice.
+- Scope: optional add-on that does not change the core experience if not installed.
+- Policy: no redistribution of third party adult assets. Users download from original sources.
+- Testing: treat as a separate add-on module with separate sanity checks (menu opens, no obvious animation framework errors).
+
+Definition of done:
+
+- Follower acquisition works.
+- Recruit/dismiss works reliably.
+- Travel across multiple cells with no new crash loop.
+- Combat with followers works (at least 1-2 fights).
+- Save/load works with follower recruited and dismissed.
+
+### Milestone 5 (complete): Audio and weather
+
+Goal: upgrade immersion while keeping performance measurable.
+
+Rule:
+
+- Separate weather from ENB decisions.
+
+Baseline audio/weather stack (baseline exports):
+
+- Audio Overhaul for Skyrim
+- Immersive Sounds - Compendium
+- Reverb Interior Sounds Expansion
+- Acoustic Space Improvement Fixes
+- Sound Record Distributor (+ patch hub as needed)
+- Cathedral Weathers and Seasons
+- True Storms Special Edition
+- Rumble Additions
+
+Definition of done:
+
+- No audio conflicts that affect core gameplay.
+- Weather changes do not break lighting dramatically.
+- Baseline stability remains unchanged (boot, new game/load, save/load).
 
 ## [0.0.1] - 2026-02-18
 
@@ -109,9 +172,9 @@ Note: see the MO2 exports referenced in `paths.md` for the exact modlist delta.
 - Content sanity check (travel/entry to content areas; no obvious script spam).
 
 
-## [0.0.4] - 2026-02-18 (In progress)
+## [0.0.4] - 2026-02-18
 
-Milestone 4 in progress (current focus): Followers (general). Serana is the first anchor.
+Milestone 4 complete: Followers (general). Serana is the first anchor.
 
 ### Added (followers)
 - Serana Dialogue Add-On
@@ -152,3 +215,21 @@ Notes:
 - Save/load with Serana recruited and dismissed.
 - OStim sanity check (optional 18+ module): menu opens, no obvious animation framework errors.
 - General stability: boot to menu, load/new game, no new crash loop, save/load.
+
+## [0.0.5] - 2026-02-21
+
+Milestone 5 complete: audio and weather baseline (immersion upgrade with measurable performance).
+
+### Added (audio and weather)
+- Audio Overhaul for Skyrim
+- Immersive Sounds - Compendium
+- Reverb Interior Sounds Expansion
+- Acoustic Space Improvement Fixes
+- Sound Record Distributor (+ patch hub as needed)
+- Cathedral Weathers and Seasons
+- True Storms Special Edition
+- Rumble Additions
+
+### Verified
+- No new crash loop introduced.
+- Boot/new game/load and save/load remain stable.

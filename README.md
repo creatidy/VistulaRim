@@ -46,7 +46,7 @@ Note: Generated outputs (LOD, BodySlide outputs, etc) are not redistributed in e
 
 ### Current status
 
-Current focus: Milestone 4 (Followers). An optional adults-only animation framework layer (18+) may exist as a separate, clearly labeled module.
+Current focus: Milestone 6 (Generated outputs policy). Milestones 4 (Followers; optional 18+ module) and 5 (audio and weather) are complete.
 
 See `CHANGELOG.md` for milestone history and what changed per release.
 

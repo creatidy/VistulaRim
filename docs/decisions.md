@@ -8,7 +8,8 @@
 ## Project status
 
 - Milestone history and current status are tracked in `CHANGELOG.md`.
-- Current focus: Milestone 4 (Followers) + optional adults-only animation layer (18+).
+- Current focus: Milestone 6 (Generated outputs policy).
+- Completed recently: Milestone 4 (Followers, optional 18+ module) and Milestone 5 (audio and weather).
 
 ## Stability and workflow
 - Stability is the primary KPI.
@@ -31,7 +32,7 @@ Gameplay identity (Milestone 2 baseline):
 ## Plugin format choices
 - Prefer ESL/light variants when offered, unless a specific patch requires a non-ESL plugin.
 
-## Followers (Milestone 4) scope
+## Followers (Milestone 4; complete) scope
 - Stability-first, small batch.
 - Followers in general. Serana is the first anchor, but Milestone 4 is not Serana-only.
 - Baseline follower stack (current exports):
@@ -42,11 +43,11 @@ Gameplay identity (Milestone 2 baseline):
   - SDA Patch Hub SE + SDA patch plugins as needed (example: Campfire / GYH / Wintersun)
 - Scope rule: do not introduce a full follower framework in the first follower iteration. If a framework is ever needed, treat it as a separate milestone.
 
-## SDA permissions and AI policy (Milestone 4)
+## SDA permissions and AI policy (Milestone 4; complete)
 - SDA voice recordings must not be used for AI training or AI voice generation.
 - SDA files must not be redistributed (Patch Pack policy: ship original VistulaRim files only).
 
-## Adults-only module policy (Milestone 4 optional, 18+)
+## Adults-only module policy (Milestone 4 optional, 18+; complete)
 - Optional module, clearly labeled 18+.
 - Consent oriented and player controlled.
 - No redistribution of third party adult assets (Patch Pack policy still applies).
