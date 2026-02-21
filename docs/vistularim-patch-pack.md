@@ -7,6 +7,7 @@ This document is the place for current and future milestone planning. Past miles
 - End-user state and requirements: `README.md`
 - Process and milestone history: `CHANGELOG.md`
 - Reasoning, motivations, and policy decisions: `docs/decisions.md`
+- Generated outputs policy and repo guardrails: `docs/generated-outputs-policy.md`
 - Paths and authoritative repo locations: `paths.md`
 
 ## Docs and repo update rules
@@ -38,29 +39,7 @@ It must not include:
 - Third party assets
 - Large generated outputs that embed third party assets
 
-## Current milestone (in progress): Milestone 6 - Generated outputs policy
-
-Goal: stop repeating the original fork pain (unclear file provenance and redistributability).
-
-Policy:
-
-- Do not distribute generated outputs in early Patch Pack versions.
-- Provide instructions for users to generate outputs locally.
-- If moving to a full installer later, treat outputs as a dedicated topic with explicit rules and permissions checks.
-
-Primary doc:
-
-- `docs/generated-outputs-policy.md`
-
-Definition of done (Milestone 6):
-
-- `docs/generated-outputs-policy.md` exists and is linked from `README.md` and this milestone section.
-- Repo guardrails exist to prevent accidental commits (at minimum: `.gitignore` updates).
-- A simple pre-release audit is documented (commands and/or a script maintainers can run).
-
-## Future milestones (planned)
-
-### Milestone 7 - Fixes and utilities baseline (Elysium-inspired)
+## Current milestone (in progress): Milestone 7 - Fixes and utilities baseline (Elysium-inspired)
 
 Goal: adopt high-value fixes/utilities that improve stability, diagnostics, and quality-of-life without changing the core gameplay identity.
 
@@ -74,7 +53,9 @@ Definition of done:
 
 - No new crash loop introduced.
 - Save/load baseline unchanged.
-- Any new tools have a documented “how to verify it’s working” note.
+- Any new tools have a documented "how to verify it's working" note.
+
+## Future milestones (planned)
 
 ### Milestone 8 - Lighting and water baseline (no ENB requirement)
 
@@ -86,7 +67,7 @@ Rule:
 
 Definition of done:
 
-- Interiors/exteriors readability improved (no widespread “too dark / too bright” regressions).
+- Interiors/exteriors readability improved (no widespread "too dark / too bright" regressions).
 - Water visuals improved with no obvious seam/flow issues in common locations.
 - Baseline stability remains unchanged (boot, new game/load, save/load).
 
@@ -98,7 +79,7 @@ Definition of done:
 
 - Clear, step-by-step generation docs exist.
 - Outputs land in dedicated MO2 output mods (never in the real game folder).
-- Overwrite policy from Milestone 14 remains achievable (no “always-dirty” Overwrite).
+- Overwrite policy from Milestone 14 remains achievable (no "always-dirty" Overwrite).
 
 ### Milestone 10 - UI/HUD pass (platform-neutral)
 
@@ -122,7 +103,7 @@ Definition of done:
 
 ### Milestone 12 - Performance and FPS hygiene (targeted)
 
-Goal: reduce stutter and problematic hotspots with targeted, well-understood performance mods (avoid “mystery gains”).
+Goal: reduce stutter and problematic hotspots with targeted, well-understood performance mods (avoid "mystery gains").
 
 Definition of done:
 
@@ -132,7 +113,7 @@ Definition of done:
 
 ### Milestone 13 - Major content module selection (optional)
 
-Goal: add one larger content pillar (example: large questline or “collection” mod) as an explicit, isolated iteration.
+Goal: add one larger content pillar (example: large questline or "collection" mod) as an explicit, isolated iteration.
 
 Rule:
 

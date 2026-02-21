@@ -36,8 +36,8 @@ Status as of 2026-02-21:
 - Milestone 3: complete (quest + content module).
 - Milestone 4: complete (Followers; optional adults-only animation layer, 18+).
 - Milestone 5: complete (audio and weather).
-- Milestone 6: in progress (generated outputs policy).
-- Milestone 7: planned (fixes and utilities baseline).
+- Milestone 6: complete (generated outputs policy).
+- Milestone 7: in progress (fixes and utilities baseline).
 - Milestone 8: planned (lighting and water baseline; no ENB requirement).
 - Milestone 9: planned (LOD and world generation workflow; user-generated).
 - Milestone 10: planned (UI/HUD pass).
@@ -233,3 +233,18 @@ Milestone 5 complete: audio and weather baseline (immersion upgrade with measura
 ### Verified
 - No new crash loop introduced.
 - Boot/new game/load and save/load remain stable.
+
+## [0.0.6] - 2026-02-21
+
+Milestone 6 complete: generated outputs policy and repo guardrails.
+
+Rule recap:
+- This repo ships a Patch Pack only (original VistulaRim work).
+- Generated outputs must be produced locally by the user and must not be committed or redistributed in early Patch Pack versions.
+
+### Added
+- Policy doc: `docs/generated-outputs-policy.md` (definition, MO2 Overwrite workflow, per-tool notes, repo hygiene checks).
+- Repo guardrails: `.gitignore` plus `scripts/check-no-generated-outputs.sh`.
+
+### Changed
+- Docs cross-links so the policy is discoverable from `README.md`, `docs/decisions.md`, and `docs/vistularim-patch-pack.md`.

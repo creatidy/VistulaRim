@@ -47,7 +47,7 @@ Note: Generated outputs (LOD, BodySlide outputs, etc) are not redistributed in e
 
 ### Current status
 
-Current focus: Milestone 6 (Generated outputs policy). Milestones 4 (Followers; optional 18+ module) and 5 (audio and weather) are complete.
+Current focus: Milestone 7 (Fixes and utilities baseline). Milestones 4 (Followers; optional 18+ module), 5 (audio and weather), and 6 (generated outputs policy) are complete.
 
 See `CHANGELOG.md` for milestone history and what changed per release.
 

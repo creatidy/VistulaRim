@@ -8,8 +8,8 @@
 ## Project status
 
 - Milestone history and current status are tracked in `CHANGELOG.md`.
-- Current focus: Milestone 6 (Generated outputs policy).
-- Completed recently: Milestone 4 (Followers, optional 18+ module) and Milestone 5 (audio and weather).
+- Current focus: Milestone 7 (Fixes and utilities baseline).
+- Completed recently: Milestone 4 (Followers, optional 18+ module), Milestone 5 (audio and weather), and Milestone 6 (generated outputs policy).
 
 ## Stability and workflow
 - Stability is the primary KPI.
