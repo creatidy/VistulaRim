@@ -28,7 +28,7 @@ Repo/documentation rules live in `docs/vistularim-patch-pack.md` (including wher
 
 ## Milestones (definition and status)
 
-Status as of 2026-02-21:
+Status as of 2026-02-22:
 
 - Milestone 0: complete (migration-friendly path conventions and centralized path tracking).
 - Milestone 1: complete (core boot/new game baseline).
@@ -38,7 +38,8 @@ Status as of 2026-02-21:
 - Milestone 5: complete (audio and weather).
 - Milestone 6: complete (generated outputs policy).
 - Milestone 7: complete (fixes and utilities baseline).
-- Milestone 8: planned (lighting and water baseline; no ENB requirement).
+- Milestone 8: complete (modern visuals baseline: Community Shaders + lighting + water; cross-platform; no ENB requirement).
+- Maintainer policy: Pandora is the standard behavior generator going forward (do not generate outputs with FNIS or Nemesis; keep behavior outputs in a dedicated MO2 output mod, not Overwrite).
 - Milestone 9: planned (LOD and world generation workflow; user-generated).
 - Milestone 10: planned (UI/HUD pass).
 - Milestone 11: planned (progression/economy/crafting systems).
@@ -105,6 +106,22 @@ Definition of done:
 - No audio conflicts that affect core gameplay.
 - Weather changes do not break lighting dramatically.
 - Baseline stability remains unchanged (boot, new game/load, save/load).
+
+## [0.0.8] - 2026-02-22
+
+Milestone 8 complete: Modern visuals baseline (cross-platform; no ENB requirement)
+
+### Added
+- Shader framework baseline: Community Shaders.
+- Lighting baseline: Relighting Skyrim SE (`RelightingSkyrim_SSE.esp`) + Luminosity Lighting Overhaul (Cathedral Concept) (`Luminosity Lighting Overhaul.esp`) + Luminosity SkyPatcher addon.
+- Water baseline: Realistic Water Two SE (`RealisticWaterTwo - Resources.esm`, `RealisticWaterTwo.esp`).
+
+### Changed
+- Overwrite hygiene: shader cache is separated as `-_Local - ShaderCache` (DO NOT DISTRIBUTE).
+- Overwrite hygiene: Community Shaders configuration is separated as `_Config - CommunityShaders`.
+
+### Policy
+- Behavior generation standard (2026): Pandora only. Keep generated behavior outputs in a dedicated MO2 output mod (never in Overwrite).
 
 ## [0.0.7] - 2026-02-22
 

@@ -35,6 +35,19 @@ Optional (useful for troubleshooting / power users):
 - xEdit (SSEEdit) for conflict inspection
 - LOOT (sanity checks only)
 
+Modern visuals baseline (Milestone 8; complete):
+
+- Shader framework (baseline, cross-platform): Community Shaders (Win11 + Ubuntu support).
+- Config hygiene: Community Shaders configuration lives in the dedicated MO2 mod `_Config - CommunityShaders`.
+- Local-only cache: shader cache is split into `-_Local - ShaderCache` and must never be distributed (DO NOT DISTRIBUTE).
+- ENB: not required for the baseline. An optional Windows-only ENB preset may exist later as a separate module.
+
+Animation generation standard (2026):
+
+- Standardize on Pandora as the only behavior generator.
+- Generated behavior outputs must live in a dedicated MO2 output mod (never in Overwrite).
+- Do not generate outputs with FNIS or Nemesis.
+
 ### How to use the Patch Pack (high level)
 
 1. Install Skyrim SE and set up MO2.
@@ -47,7 +60,12 @@ Note: Generated outputs (LOD, BodySlide outputs, etc) are not redistributed in e
 
 ### Current status
 
-Current focus: Milestone 7 (Fixes and utilities baseline). Milestones 4 (Followers; optional 18+ module), 5 (audio and weather), and 6 (generated outputs policy) are complete.
+Optional 18+ module:
+
+- VistulaRim supports an optional adults-only module (Milestone 4). It is not required for the baseline Patch Pack.
+- The baseline exports include the optional 18+ stack (including OStim). Treat it as a separate module you can disable.
+
+Current focus: Milestone 9 (LOD and world generation workflow; user-generated). Milestones 4 (Followers; optional 18+ module), 5 (audio and weather), 6 (generated outputs policy), 7 (fixes and utilities baseline), and 8 (modern visuals baseline, cross-platform) are complete.
 
 See `CHANGELOG.md` for milestone history and what changed per release.
 

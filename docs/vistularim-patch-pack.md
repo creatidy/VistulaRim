@@ -39,31 +39,21 @@ It must not include:
 - Third party assets
 - Large generated outputs that embed third party assets
 
-## Current milestone (in progress): Milestone 8 - Lighting and water baseline (no ENB requirement)
-
-Goal: improve visual consistency with measurable performance impact and without committing to an ENB path.
-
-Rule:
-
-- Keep weather decisions separate (already handled in Milestone 5; do not re-tune weather as part of this milestone unless required by a chosen lighting solution).
-
-Definition of done:
-
-- Interiors/exteriors readability improved (no widespread "too dark / too bright" regressions).
-- Water visuals improved with no obvious seam/flow issues in common locations.
-- Baseline stability remains unchanged (boot, new game/load, save/load).
-
-## Future milestones (planned)
-
-### Milestone 9 - LOD and world generation workflow (user-generated)
+## Current milestone (in progress): Milestone 9 - LOD and world generation workflow (user-generated)
 
 Goal: define a reproducible, permission-safe workflow for LOD/gen outputs (xLODGen/TexGen/DynDOLOD/grass cache), without redistributing generated assets.
 
 Definition of done:
 
+Note:
+
+- Some visuals choices can require regenerating LOD or redoing world-gen outputs. Document any coupling when a workflow is chosen.
+
 - Clear, step-by-step generation docs exist.
 - Outputs land in dedicated MO2 output mods (never in the real game folder).
 - Overwrite policy from Milestone 14 remains achievable (no "always-dirty" Overwrite).
+
+## Future milestones (planned)
 
 ### Milestone 10 - UI/HUD pass (platform-neutral)
 

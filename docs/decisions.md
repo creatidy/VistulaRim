@@ -8,8 +8,8 @@
 ## Project status
 
 - Milestone history and current status are tracked in `CHANGELOG.md`.
-- Current focus: Milestone 7 (Fixes and utilities baseline).
-- Completed recently: Milestone 4 (Followers, optional 18+ module), Milestone 5 (audio and weather), and Milestone 6 (generated outputs policy).
+- Current focus: Milestone 9 (LOD and world generation workflow; user-generated).
+- Completed recently: Milestone 7 (Fixes and utilities baseline) and Milestone 8 (modern visuals baseline, cross-platform).
 
 ## Stability and workflow
 - Stability is the primary KPI.
@@ -100,3 +100,10 @@ Goal: reduce feature creep and patch/testing noise while the base modlist is sti
   - internal ID in modlist.txt: `ccbgssse037-curios`
   - plugin file: `ccBGSSSE037-Curios.esl`
   - archive file: `ccBGSSSE037-Curios.bsa`
+
+## Modern visuals baseline (Milestone 8; complete)
+- Cross-platform visuals baseline uses Community Shaders (baseline does not require ENB).
+- Optional Windows-only ENB may exist later only as a separate module.
+- Shader cache is local-only (`-_Local - ShaderCache`) and is never distributed (DO NOT DISTRIBUTE).
+- Community Shaders configuration is kept in `_Config - CommunityShaders`.
+- Behavior generation standard (2026): Pandora only. Keep generated behavior outputs in a dedicated MO2 output mod (never in Overwrite).

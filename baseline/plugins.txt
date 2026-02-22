@@ -3,11 +3,13 @@
 Ashe RCO Patch.esp
 Rumble - UI - Memospore.esp
 *unofficial skyrim special edition patch.esp
+*RealisticWaterTwo - Resources.esm
 *Campfire.esm
 *SkyUI_SE.esp
 *Audio Overhaul Skyrim.esp
 *Immersive Sounds - Compendium.esp
 *TrueStormsSE.esp
+*RelightingSkyrim_SSE.esp
 *AI Overhaul.esp
 *SeranaDialogAddon.esp
 *Odin - Skyrim Magic Overhaul.esp
@@ -61,3 +63,5 @@ AcousticTemplateFixes_CC_Farming.esp
 *Vokrii - Minimalistic Perks of Skyrim.esp
 *Odin - Vokrii Compatibility Patch.esp
 *VistulaRim_Patch.esp
+*RealisticWaterTwo.esp
+*Luminosity Lighting Overhaul.esp
