@@ -41,8 +41,8 @@ Status as of 2026-02-23:
 - Milestone 8: complete (modern visuals baseline: Community Shaders + lighting + water; cross-platform; no ENB requirement).
 - Maintainer policy: Pandora is the standard behavior generator going forward (do not generate outputs with FNIS or Nemesis; keep behavior outputs in a dedicated MO2 output mod, not Overwrite).
 - Milestone 9: complete (LOD and world generation workflow; user-generated).
-- Milestone 10: in progress (UI/HUD pass).
-- Milestone 11: planned (progression/economy/crafting systems).
+- Milestone 10: complete (UI/HUD pass).
+- Milestone 11: in progress (progression/economy/crafting systems).
 - Milestone 12: planned (performance and FPS hygiene).
 - Milestone 13: planned (major content module selection).
 - Milestone 14: planned (cleaning and Wabbajack-friendly policy).
@@ -107,12 +107,35 @@ Definition of done:
 - Weather changes do not break lighting dramatically.
 - Baseline stability remains unchanged (boot, new game/load, save/load).
 
+## [0.0.10] - 2026-02-23
+
+Milestone 10 complete: UI/HUD pass (basic).
+
+### Added
+- UI/HUD: Infinity UI.
+- UI/HUD: Compass Navigation Overhaul.
+- UI/HUD: TrueHUD - HUD Additions (plugin: `TrueHUD.esl`).
+
+### Changed
+- Baseline exports: added local LOD output mods (`VR - Output - xLODGen`, `VR - Output - TexGen`, `VR - Output - DynDOLOD`).
+- Baseline exports: generated LOD plugins now appear in snapshots (`DynDOLOD.esm`, `Occlusion.esp`, `DynDOLOD.esp`).
+- Baseline exports: removed `DynDOLOD Resources SE` and `xLODGen Resource - SSE Terrain Tamriel` entries from the snapshot.
+- Baseline exports: removed `-_Local - ShaderCache` entry from the snapshot.
+- Docs/policy: Creations baseline updated (Anniversary Upgrade required; install/download all AECC bundle content; Verified Creations not required/supported).
+
+### Verified
+- Boot to menu
+- Start a new game (or load the clean post-Helgen test save)
+- Open inventory, magic menu, map
+- Walk outside, engage in 1 combat
+- Save, load
+
 ## [0.0.9] - 2026-02-23
 
 Milestone 9 complete: LOD and world generation workflow (user-generated; validated in-game).
 
 ### Added
-- Manual: `docs/manual-lod-generation.md` (xLODGen/SSELODGen terrain LOD → TexGen → DynDOLOD).
+- Manual: `docs/manual-lod-generation.md` (xLODGen/SSELODGen terrain LOD -> TexGen -> DynDOLOD).
 
 ### Changed
 - Docs cross-links and status updates to reflect Milestone 9 completion.

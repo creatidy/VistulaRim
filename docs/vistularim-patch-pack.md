@@ -40,21 +40,9 @@ It must not include:
 - Third party assets
 - Large generated outputs that embed third party assets
 
-## Current milestone (in progress): Milestone 10 - UI/HUD pass (platform-neutral)
+## Current milestone (in progress): Milestone 11 - Progression/economy/crafting systems
 
-Milestone 9 (LOD workflow; user-generated) is complete. Manual: `docs/manual-lod-generation.md` (see `CHANGELOG.md` for milestone history).
-
-Goal: improve moment-to-moment usability (HUD, compass, widgets) while keeping the core UI stable. Keep choices VR-friendly when possible, but do not introduce VR-only dependencies here.
-
-Definition of done:
-
-- No broken menus (inventory/magic/map).
-- HUD additions do not cause persistent script spam or UI errors.
-- Baseline stability remains unchanged (boot, new game/load, save/load).
-
-## Future milestones (planned)
-
-### Milestone 11 - Progression/economy/crafting systems (postpone until stable)
+See `CHANGELOG.md` for milestone history.
 
 Goal: only after the base is stable, consider progression (XP), economy (trade), and crafting overhauls as deliberate, isolated iterations.
 
@@ -63,6 +51,8 @@ Definition of done:
 - Clear design intent documented (what problem is being solved).
 - No widespread economy breakage (vendors, loot, crafting).
 - Baseline stability remains unchanged (boot, new game/load, save/load).
+
+## Future milestones (planned)
 
 ### Milestone 12 - Performance and FPS hygiene (targeted)
 
@@ -130,10 +120,10 @@ Clean only what LOOT explicitly reports as needing cleaning and what the communi
 
 Do not clean Skyrim.esm.
 
-Creation Club / Creations policy:
+Creations policy:
 
-- For Patch Pack development: keep the baseline 4 Creations only (Fishing, Survival, Saints and Seducers, Rare Curios) and disable all other cc* plugins.
-- For a future public Wabbajack list: do not require paid Creations. Treat them as an optional addon module at most.
+- Anniversary Upgrade required; install/download all included Anniversary Edition Creation Club content (AECC bundle).
+- Verified Creations are not required and are not supported.
 
 #### How to clean safely (MO2 + Quick Auto Clean)
 
@@ -215,7 +205,7 @@ This reduces update breakage and makes support easier.
 
 - DLC masters cleaned using Quick Auto Clean, stored in 00 - Cleaned Vanilla Masters, no edits in the real Skyrim folder.
 - A strict Overwrite policy is followed: outputs are sorted into dedicated output mods, caches deleted, backups handled intentionally.
-- Creations policy is enforced (baseline only for Patch Pack development; no paid Creations required for a future public Wabbajack list).
+- Creations policy is enforced (Anniversary Upgrade required; install/download all included AECC bundle content; Verified Creations not required/supported).
 - The resulting setup remains stable at the baseline test level (boot, new game/load, save/load).
 
 ## Optional future: path to a full installer

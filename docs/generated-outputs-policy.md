@@ -169,6 +169,11 @@ Quick sanity checks:
 What they are:
 - Transient artifacts that are useful for diagnostics but should not be shipped or committed.
 
+Examples (common Overwrite noise):
+
+- Root-level logs that can reappear: `d3dx9_42.log` (runtime/preloader).
+- Cache folders that can reappear: `SharedCache`.
+
 What to do:
 - Delete after validation and troubleshooting.
 - If you need to share logs for support, do it out of band (do not add to the Patch Pack repo).

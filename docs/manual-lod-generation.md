@@ -28,7 +28,7 @@ Important: **DynDOLOD does not generate terrain (or water) LOD**. Terrain is han
   - Do not move outputs into your real Skyrim game folder.
 - **Run generators through MO2** and keep Overwrite clean:
   - Let the tool write into MO2 Overwrite.
-  - Immediately “Move content to mod…” into a dedicated output mod.
+  - Immediately "Move content to mod..." into a dedicated output mod.
 - **Use dedicated MO2 output mods** (consistent naming):
   - `VR - Output - xLODGen`
   - `VR - Output - TexGen`
@@ -49,7 +49,7 @@ Create these empty mods up front (left pane, under Outputs):
 
 Recommended left pane ordering (high level):
 
-- Resources and required “input” mods first.
+- Resources and required "input" mods first.
 - Output mods late, near the end, with a stable order:
   - `VR - Output - xLODGen`
   - `VR - Output - TexGen`
@@ -62,9 +62,9 @@ Rule: outputs should win conflicts only when that is the intended result (they a
 Add these tools as executables in MO2 and always run them through MO2:
 
 - `TexGenx64.exe`
-- `DynDOLODx64.exe` (note: **not** “DynDOLODDx64.exe”)
+- `DynDOLODx64.exe` (note: **not** "DynDOLODDx64.exe")
 - `xLODGen` / `SSELODGen` (name varies)
-  - This is xEdit running in “LODGen” mode. Treat it as “xLODGen” in documentation even if the executable is named SSELODGen.
+  - This is xEdit running in "LODGen" mode. Treat it as "xLODGen" in documentation even if the executable is named SSELODGen.
 
 Placement recommendation:
 
@@ -90,7 +90,7 @@ Steps (basic):
 5. In options, check **only**:
    - **Terrain LOD**
 6. Run generation and let it finish.
-7. In MO2, right-click **Overwrite** → **Move content to mod…** → choose `VR - Output - xLODGen`.
+7. In MO2, right-click **Overwrite** -> **Move content to mod...** -> choose `VR - Output - xLODGen`.
 8. Critical cleanup:
    - Disable `SSE-Terrain-Tamriel.esm` after terrain generation (see troubleshooting below).
 
@@ -110,7 +110,7 @@ Steps (basic):
 5. Let it finish.
 6. In MO2, move Overwrite into `VR - Output - TexGen`.
 
-Sanity check: `VR - Output - TexGen` is enabled and placed so DynDOLOD “sees” it (i.e., it loads before `VR - Output - DynDOLOD`).
+Sanity check: `VR - Output - TexGen` is enabled and placed so DynDOLOD "sees" it (i.e., it loads before `VR - Output - DynDOLOD`).
 
 ### 3) DynDOLOD (object/tree LOD + plugins)
 
@@ -130,10 +130,10 @@ Steps (basic):
 
 ## 4K default guidance (conservative and reproducible)
 
-Goal: ensure the generators target your actual display/output resolution, without “mystery” ultra settings.
+Goal: ensure the generators target your actual display/output resolution, without "mystery" ultra settings.
 
 - Confirm your game is configured for **3840x2160** (example: `SkyrimPrefs.ini` values `iSize W=3840` and `iSize H=2160`, or equivalent launcher/BethINI configuration).
-- Expect higher VRAM usage at 4K. If you hit instability or stutter, reduce settings before assuming “it’s broken”.
+- Expect higher VRAM usage at 4K. If you hit instability or stutter, reduce settings before assuming "it's broken".
 
 DynDOLOD (Advanced) tile-size guidance for 2160p (use as a starting point, not a requirement):
 
@@ -156,7 +156,7 @@ Symptom:
 
 What it is:
 
-- `SSE-Terrain-Tamriel.esm` is part of the **temporary** “xLODGen Resource - SSE Terrain Tamriel” terrain-restore workflow.
+- `SSE-Terrain-Tamriel.esm` is part of the **temporary** "xLODGen Resource - SSE Terrain Tamriel" terrain-restore workflow.
 
 Why it happens:
 
@@ -164,12 +164,37 @@ Why it happens:
 
 Fix (MO2):
 
-1. Open MO2 → right pane → **Plugins** tab.
+1. Open MO2 -> right pane -> **Plugins** tab.
 2. Find `SSE-Terrain-Tamriel.esm`.
 3. Uncheck/disable it.
 4. Re-run `DynDOLODx64.exe`.
 
 Rule: enable it only for the terrain LOD step if you truly need it, then disable it immediately afterward.
+
+### World map looks blocky or tiled (large rectangles)
+
+Symptom:
+
+- The world map looks blocky, with large rectangles/tiles (especially when zoomed out).
+
+Likely cause:
+
+- Terrain LOD (especially LOD32) was generated at too low a resolution for your display, or the terrain outputs are stale/mismatched with your current landscape texture stack.
+
+Fix (regenerate terrain LOD with xLODGen / SSELODGen):
+
+1. Freeze your modlist, plugin list, and load order.
+2. In MO2, clear out old terrain LOD files from `VR - Output - xLODGen` (or disable the mod and regenerate into a clean output).
+3. Run `xLODGen` / `SSELODGen` from MO2.
+4. Select **Tamriel**, and check **only** **Terrain LOD**.
+5. In the terrain options, increase the LOD32 texture size/resolution compared to the previous run (avoid the lowest setting).
+6. Let it finish, then move the new files from Overwrite into `VR - Output - xLODGen`.
+7. Re-test the world map in game.
+
+Notes:
+
+- DynDOLOD does not generate terrain (or water) LOD. If the issue is terrain LOD, rerunning DynDOLOD will not fix it.
+- If you changed landscape textures/meshes after generating terrain LOD, treat the terrain output as invalidated and regenerate.
 
 ### Outputs landed in MO2 Overwrite
 
@@ -177,7 +202,7 @@ This is expected if you run through MO2.
 
 Fix:
 
-- Right-click **Overwrite** → **Move content to mod…**
+- Right-click **Overwrite** -> **Move content to mod...**
 - Move into the correct output mod:
   - `VR - Output - xLODGen`
   - `VR - Output - TexGen`
@@ -185,16 +210,16 @@ Fix:
 
 ### Tool naming confusion
 
-- `DynDOLODx64.exe` is correct. “DynDOLODDx64.exe” (double D) is a typo.
+- `DynDOLODx64.exe` is correct. "DynDOLODDx64.exe" (double D) is a typo.
 - `SSELODGen` vs `xLODGen`:
-  - Treat them as “xLODGen” in the workflow; they are the same practical step (xEdit LODGen mode) in this pipeline.
+  - Treat them as "xLODGen" in the workflow; they are the same practical step (xEdit LODGen mode) in this pipeline.
 
 ## Validation checklist (quick in-game sanity)
 
 - Load an exterior save with clear sightlines.
 - Check a few wide vistas:
   - No purple/missing textures in the distance.
-  - Terrain LOD looks continuous (no obvious seams or “holes” at range).
+  - Terrain LOD looks continuous (no obvious seams or "holes" at range).
 - Check forest edges and city exteriors:
   - Distant objects/trees appear plausibly (reduced pop-in).
   - No obvious missing billboard textures.
@@ -207,9 +232,8 @@ Fix:
   - Consider only after the basic pass is stable and you can measure the tradeoff.
 - **Grass LOD**
   - Requires grass billboards and more time; adds another axis of troubleshooting.
-  - Treat as a separate iteration (do not mix into a “first pass”).
+  - Treat as a separate iteration (do not mix into a "first pass").
 - **Additional worldspaces**
   - Add beyond Tamriel only when you have a reason and a repeatable test route.
 - **Performance/quality tuning**
   - Make one change at a time, regenerate only what changed, and keep notes on VRAM and frametime impact.
-

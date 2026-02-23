@@ -38,6 +38,8 @@ ccafdsse001-dwesanctuary.esm
 _ResourcePack.esl
 unofficial skyrim special edition patch.esp
 RealisticWaterTwo - Resources.esm
+TrueHUD.esl
+DynDOLOD.esm
 Campfire.esm
 SkyUI_SE.esp
 Audio Overhaul Skyrim.esp
@@ -101,3 +103,5 @@ Odin - Vokrii Compatibility Patch.esp
 VistulaRim_Patch.esp
 RealisticWaterTwo.esp
 Luminosity Lighting Overhaul.esp
+Occlusion.esp
+DynDOLOD.esp

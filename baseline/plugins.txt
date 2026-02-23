@@ -4,6 +4,8 @@ Ashe RCO Patch.esp
 Rumble - UI - Memospore.esp
 *unofficial skyrim special edition patch.esp
 *RealisticWaterTwo - Resources.esm
+*TrueHUD.esl
+*DynDOLOD.esm
 *Campfire.esm
 *SkyUI_SE.esp
 *Audio Overhaul Skyrim.esp
@@ -65,3 +67,5 @@ AcousticTemplateFixes_CC_Farming.esp
 *VistulaRim_Patch.esp
 *RealisticWaterTwo.esp
 *Luminosity Lighting Overhaul.esp
+*Occlusion.esp
+*DynDOLOD.esp

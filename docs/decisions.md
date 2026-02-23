@@ -8,8 +8,8 @@
 ## Project status
 
 - Milestone history and current status are tracked in `CHANGELOG.md`.
-- Current focus: Milestone 10 (UI/HUD pass).
-- Completed recently: Milestone 7 (Fixes and utilities baseline) and Milestone 8 (modern visuals baseline, cross-platform).
+- Current focus: Milestone 11 (progression/economy/crafting systems).
+- Completed recently: Milestone 10 (UI/HUD pass).
 - Milestone 9 (LOD workflow; user-generated) is complete. Manual: `docs/manual-lod-generation.md`.
 
 ## Stability and workflow
@@ -81,26 +81,12 @@ xEdit warnings (known benign):
 
 ## Creations (Creation Club) policy
 
-Goal: reduce feature creep and patch/testing noise while the base modlist is still evolving.
+Goal: keep the baseline predictable and reduce support risk.
 
-- Keep enabled only the baseline 4 Creations:
-  - Fishing
-  - Survival Mode
-  - Saints and Seducers (AdvDSGS)
-  - Rare Curios (Curios)
-- Disable all other cc* plugins for now.
-- Re-enable additional Creations only when a chosen mod explicitly requires them.
-
-### Creations filename mapping (internal ID -> store name)
-- ccBGSSSE025-AdvDSGS = Saints and Seducers
-  - internal ID in modlist.txt: `ccbgssse025-advdsgs`
-  - plugin file: `ccBGSSSE025-AdvDSGS.esm`
-  - archive file: `ccBGSSSE025-AdvDSGS.bsa`
-
-- ccBGSSSE037-Curios = Rare Curios
-  - internal ID in modlist.txt: `ccbgssse037-curios`
-  - plugin file: `ccBGSSSE037-Curios.esl`
-  - archive file: `ccBGSSSE037-Curios.bsa`
+- Skyrim Special Edition with the Anniversary Edition upgrade is required.
+- Install/download all included Anniversary Edition Creation Club content (AECC bundle).
+- Verified Creations are not required and are not supported.
+  - Do not build baseline dependencies on Verified Creations.
 
 ## Modern visuals baseline (Milestone 8; complete)
 - Cross-platform visuals baseline uses Community Shaders (baseline does not require ENB).

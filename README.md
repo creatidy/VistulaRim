@@ -26,7 +26,9 @@ It does not include:
 ### Requirements
 
 - Skyrim Special Edition with the **Anniversary Edition** upgrade installed.
-  - Creations policy for Patch Pack development: keep enabled only the baseline 4 Creations (Fishing, Survival Mode, Saints and Seducers, Rare Curios). See `docs/decisions.md`.
+  - Creations baseline: install/download all included Anniversary Edition Creation Club content (AECC bundle).
+  - Verified Creations are not required and are not supported.
+  - See `docs/decisions.md`.
 - Mod Organizer 2
 - SKSE matching your Skyrim runtime
 
@@ -65,7 +67,7 @@ Optional 18+ module:
 - VistulaRim supports an optional adults-only module (Milestone 4). It is not required for the baseline Patch Pack.
 - The baseline exports include the optional 18+ stack (including OStim). Treat it as a separate module you can disable.
 
-Current focus: Milestone 10 (UI/HUD pass). Milestones 4 (Followers; optional 18+ module), 5 (audio and weather), 6 (generated outputs policy), 7 (fixes and utilities baseline), 8 (modern visuals baseline, cross-platform), and 9 (LOD workflow; user-generated) are complete.
+Current focus: Milestone 11 (progression/economy/crafting systems). Milestones 4 (Followers; optional 18+ module), 5 (audio and weather), 6 (generated outputs policy), 7 (fixes and utilities baseline), 8 (modern visuals baseline, cross-platform), 9 (LOD workflow; user-generated), and 10 (UI/HUD pass) are complete.
 
 See `CHANGELOG.md` for milestone history and what changed per release.
 
@@ -80,7 +82,9 @@ See `CHANGELOG.md` for milestone history and what changed per release.
 Local development requirements:
 
 - Skyrim Special Edition with the **Anniversary Edition** upgrade installed (Steam recommended).
-  - Creations policy for Patch Pack development: keep enabled only the baseline 4 Creations (Fishing, Survival Mode, Saints and Seducers, Rare Curios). See `docs/decisions.md`.
+  - Creations baseline: install/download all included Anniversary Edition Creation Club content (AECC bundle).
+  - Verified Creations are not required and are not supported.
+  - See `docs/decisions.md`.
 - Mod Organizer 2
 - xEdit (SSEEdit) for conflict inspection and forwardings
 - LOOT (sanity checks only)
