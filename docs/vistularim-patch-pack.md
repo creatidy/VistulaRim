@@ -8,6 +8,7 @@ This document is the place for current and future milestone planning. Past miles
 - Process and milestone history: `CHANGELOG.md`
 - Reasoning, motivations, and policy decisions: `docs/decisions.md`
 - Generated outputs policy and repo guardrails: `docs/generated-outputs-policy.md`
+- LOD generation manual (user-generated outputs): `docs/manual-lod-generation.md`
 - Paths and authoritative repo locations: `paths.md`
 
 ## Docs and repo update rules
@@ -39,23 +40,9 @@ It must not include:
 - Third party assets
 - Large generated outputs that embed third party assets
 
-## Current milestone (in progress): Milestone 9 - LOD and world generation workflow (user-generated)
+## Current milestone (in progress): Milestone 10 - UI/HUD pass (platform-neutral)
 
-Goal: define a reproducible, permission-safe workflow for LOD/gen outputs (xLODGen/TexGen/DynDOLOD/grass cache), without redistributing generated assets.
-
-Definition of done:
-
-Note:
-
-- Some visuals choices can require regenerating LOD or redoing world-gen outputs. Document any coupling when a workflow is chosen.
-
-- Clear, step-by-step generation docs exist.
-- Outputs land in dedicated MO2 output mods (never in the real game folder).
-- Overwrite policy from Milestone 14 remains achievable (no "always-dirty" Overwrite).
-
-## Future milestones (planned)
-
-### Milestone 10 - UI/HUD pass (platform-neutral)
+Milestone 9 (LOD workflow; user-generated) is complete. Manual: `docs/manual-lod-generation.md` (see `CHANGELOG.md` for milestone history).
 
 Goal: improve moment-to-moment usability (HUD, compass, widgets) while keeping the core UI stable. Keep choices VR-friendly when possible, but do not introduce VR-only dependencies here.
 
@@ -64,6 +51,8 @@ Definition of done:
 - No broken menus (inventory/magic/map).
 - HUD additions do not cause persistent script spam or UI errors.
 - Baseline stability remains unchanged (boot, new game/load, save/load).
+
+## Future milestones (planned)
 
 ### Milestone 11 - Progression/economy/crafting systems (postpone until stable)
 

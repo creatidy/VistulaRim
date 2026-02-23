@@ -56,7 +56,7 @@ Animation generation standard (2026):
 4. Enable the VistulaRim patch plugin(s).
 5. (Optional) Run LOOT as a sanity check, then launch and playtest.
 
-Note: Generated outputs (LOD, BodySlide outputs, etc) are not redistributed in early versions. See `docs/generated-outputs-policy.md` for the standard MO2 workflow if you need to generate outputs locally.
+Note: Generated outputs (LOD, BodySlide outputs, etc) are not redistributed in early versions. See `docs/generated-outputs-policy.md` for the standard MO2 workflow. For LOD specifically, see `docs/manual-lod-generation.md`.
 
 ### Current status
 
@@ -65,7 +65,7 @@ Optional 18+ module:
 - VistulaRim supports an optional adults-only module (Milestone 4). It is not required for the baseline Patch Pack.
 - The baseline exports include the optional 18+ stack (including OStim). Treat it as a separate module you can disable.
 
-Current focus: Milestone 9 (LOD and world generation workflow; user-generated). Milestones 4 (Followers; optional 18+ module), 5 (audio and weather), 6 (generated outputs policy), 7 (fixes and utilities baseline), and 8 (modern visuals baseline, cross-platform) are complete.
+Current focus: Milestone 10 (UI/HUD pass). Milestones 4 (Followers; optional 18+ module), 5 (audio and weather), 6 (generated outputs policy), 7 (fixes and utilities baseline), 8 (modern visuals baseline, cross-platform), and 9 (LOD workflow; user-generated) are complete.
 
 See `CHANGELOG.md` for milestone history and what changed per release.
 

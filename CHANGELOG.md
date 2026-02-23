@@ -28,7 +28,7 @@ Repo/documentation rules live in `docs/vistularim-patch-pack.md` (including wher
 
 ## Milestones (definition and status)
 
-Status as of 2026-02-22:
+Status as of 2026-02-23:
 
 - Milestone 0: complete (migration-friendly path conventions and centralized path tracking).
 - Milestone 1: complete (core boot/new game baseline).
@@ -40,8 +40,8 @@ Status as of 2026-02-22:
 - Milestone 7: complete (fixes and utilities baseline).
 - Milestone 8: complete (modern visuals baseline: Community Shaders + lighting + water; cross-platform; no ENB requirement).
 - Maintainer policy: Pandora is the standard behavior generator going forward (do not generate outputs with FNIS or Nemesis; keep behavior outputs in a dedicated MO2 output mod, not Overwrite).
-- Milestone 9: planned (LOD and world generation workflow; user-generated).
-- Milestone 10: planned (UI/HUD pass).
+- Milestone 9: complete (LOD and world generation workflow; user-generated).
+- Milestone 10: in progress (UI/HUD pass).
 - Milestone 11: planned (progression/economy/crafting systems).
 - Milestone 12: planned (performance and FPS hygiene).
 - Milestone 13: planned (major content module selection).
@@ -106,6 +106,20 @@ Definition of done:
 - No audio conflicts that affect core gameplay.
 - Weather changes do not break lighting dramatically.
 - Baseline stability remains unchanged (boot, new game/load, save/load).
+
+## [0.0.9] - 2026-02-23
+
+Milestone 9 complete: LOD and world generation workflow (user-generated; validated in-game).
+
+### Added
+- Manual: `docs/manual-lod-generation.md` (xLODGen/SSELODGen terrain LOD → TexGen → DynDOLOD).
+
+### Changed
+- Docs cross-links and status updates to reflect Milestone 9 completion.
+- Tool naming clarified in docs (`DynDOLODx64.exe` spelling; xLODGen/SSELODGen naming).
+
+### Troubleshooting note
+- DynDOLOD blocks running if `SSE-Terrain-Tamriel.esm` is enabled (disable it after the terrain LOD step).
 
 ## [0.0.8] - 2026-02-22
 

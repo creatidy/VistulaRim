@@ -8,8 +8,9 @@
 ## Project status
 
 - Milestone history and current status are tracked in `CHANGELOG.md`.
-- Current focus: Milestone 9 (LOD and world generation workflow; user-generated).
+- Current focus: Milestone 10 (UI/HUD pass).
 - Completed recently: Milestone 7 (Fixes and utilities baseline) and Milestone 8 (modern visuals baseline, cross-platform).
+- Milestone 9 (LOD workflow; user-generated) is complete. Manual: `docs/manual-lod-generation.md`.
 
 ## Stability and workflow
 - Stability is the primary KPI.
