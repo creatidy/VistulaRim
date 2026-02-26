@@ -67,7 +67,14 @@ Optional 18+ module:
 - VistulaRim supports an optional adults-only module (Milestone 4). It is not required for the baseline Patch Pack.
 - The baseline exports include the optional 18+ stack (including OStim). Treat it as a separate module you can disable.
 
-Current focus: Milestone 11 (progression/economy/crafting systems). Milestones 4 (Followers; optional 18+ module), 5 (audio and weather), 6 (generated outputs policy), 7 (fixes and utilities baseline), 8 (modern visuals baseline, cross-platform), 9 (LOD workflow; user-generated), and 10 (UI/HUD pass) are complete.
+Current focus: Milestone 12 (performance and FPS hygiene). Milestones 4 (Followers; optional 18+ module), 5 (audio and weather), 6 (generated outputs policy), 7 (fixes and utilities baseline), 8 (modern visuals baseline, cross-platform), 9 (LOD workflow; user-generated), 10 (UI/HUD pass), and 11 (progression/economy/crafting systems) are complete.
+
+Milestone 11 summary (baseline changes):
+
+- Progression: character leveling is XP-based (Experience).
+- Economy: prices and barter are tuned via Trade and Barter.
+- Crafting: NPC crafting/enchanting services are enabled via Honed Metal.
+- Settings: settings loaders are used where available to reduce repeated MCM setup across new games.
 
 See `CHANGELOG.md` for milestone history and what changed per release.
 

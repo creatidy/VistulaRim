@@ -28,7 +28,7 @@ Repo/documentation rules live in `docs/vistularim-patch-pack.md` (including wher
 
 ## Milestones (definition and status)
 
-Status as of 2026-02-23:
+Status as of 2026-02-25:
 
 - Milestone 0: complete (migration-friendly path conventions and centralized path tracking).
 - Milestone 1: complete (core boot/new game baseline).
@@ -42,8 +42,8 @@ Status as of 2026-02-23:
 - Maintainer policy: Pandora is the standard behavior generator going forward (do not generate outputs with FNIS or Nemesis; keep behavior outputs in a dedicated MO2 output mod, not Overwrite).
 - Milestone 9: complete (LOD and world generation workflow; user-generated).
 - Milestone 10: complete (UI/HUD pass).
-- Milestone 11: in progress (progression/economy/crafting systems).
-- Milestone 12: planned (performance and FPS hygiene).
+- Milestone 11: complete (progression/economy/crafting systems).
+- Milestone 12: in progress (performance and FPS hygiene).
 - Milestone 13: planned (major content module selection).
 - Milestone 14: planned (cleaning and Wabbajack-friendly policy).
 - Milestone 15: planned (widescreen support).
@@ -106,6 +106,32 @@ Definition of done:
 - No audio conflicts that affect core gameplay.
 - Weather changes do not break lighting dramatically.
 - Baseline stability remains unchanged (boot, new game/load, save/load).
+
+## [0.0.11] - 2026-02-25
+
+Milestone 11 complete: progression/economy/crafting systems (stability preserved)
+
+### Added
+- Progression: Experience (left-pane mod entry; no plugin in baseline exports).
+- Economy: Trade and Barter (plugin: `trade & barter.esp`).
+- Economy: Trade and Barter - Settings Loader (left-pane mod entry; no plugin).
+- Crafting: Honed Metal (plugin: `HonedMetal.esp`).
+- Crafting: Honed Metal -NPC Crafting and Enchanting Services- - Settings Loader (left-pane mod entry; no plugin).
+
+### Changed
+- Baseline exports updated to reflect Milestone 11 additions (see `baseline/modlist.txt`, `baseline/plugins.txt`, `baseline/loadorder.txt`).
+- Load order captured: `HonedMetal.esp` and `trade & barter.esp` load before `Vokrii - Minimalistic Perks of Skyrim.esp` and before `VistulaRim_Patch.esp`.
+
+### Patch
+- `VistulaRim_Patch.esp`: No new forwardings were required for Milestone 11.
+
+### Verified
+- Boot to menu.
+- New game (or load clean post-Helgen test save).
+- Open inventory, magic, map.
+- Walk outside, engage in 1 combat.
+- Save, load.
+- Milestone 11 sanity: vendors/barter feel sane; loot not obviously broken; basic crafting/enchanting flow works; no new crash loop.
 
 ## [0.0.10] - 2026-02-23
 

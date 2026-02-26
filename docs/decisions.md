@@ -8,8 +8,9 @@
 ## Project status
 
 - Milestone history and current status are tracked in `CHANGELOG.md`.
-- Current focus: Milestone 11 (progression/economy/crafting systems).
-- Completed recently: Milestone 10 (UI/HUD pass).
+- Current focus: Milestone 12 (performance and FPS hygiene).
+- Completed recently: Milestone 11 (progression/economy/crafting systems).
+- Milestone 10 (UI/HUD pass) is complete.
 - Milestone 9 (LOD workflow; user-generated) is complete. Manual: `docs/manual-lod-generation.md`.
 
 ## Stability and workflow
@@ -18,6 +19,16 @@
 - LOOT is used only as a sanity check.
 - Conflicts are resolved via forwardings into VistulaRim_Patch.esp.
 - A clean post-Helgen save is the default playtest starting point.
+- Workflow: install/tune in the Authoring profile, validate in the Playtest profile.
+
+## Milestone 11 (complete) decision: progression/economy/crafting systems
+
+- Progression: use Experience to make character leveling XP-based (decoupled from skill grinding).
+- Economy: use Trade and Barter to reduce gold inflation and keep vendor prices sane.
+- Crafting: use Honed Metal to shift crafting/enchanting power toward NPC services (gold sink; less crafting dominance).
+- Settings: use settings loader mods where available to reduce MCM friction and keep baseline settings consistent across new games.
+- Persistence: prefer config-driven/persistent settings over per-playthrough MCM tweaking.
+- Guardrails: stability KPI unchanged; small-batch iteration; LOOT sanity only; forwardings only when justified; keep `VistulaRim_Patch.esp` late in the load order and after any plugins it forwards.
 
 ## Gameplay direction (Elysium-inspired, not a copy)
 - Target feel: rich and immersive living world, fun combat, and balanced "vanilla plus" direction.
@@ -73,7 +84,8 @@ Rationale:
 
 ## Patch plugin policy
 
-- VistulaRim_Patch.esp must load last and is used only for explicit, justified forwardings.
+- VistulaRim_Patch.esp must load late and after any plugins it forwards; it is used only for explicit, justified forwardings.
+- Generated-output plugins (example: DynDOLOD/Occlusion) may load after it.
 - If no forwardings are required, that is documented explicitly.
 
 xEdit warnings (known benign):

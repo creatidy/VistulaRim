@@ -40,21 +40,11 @@ It must not include:
 - Third party assets
 - Large generated outputs that embed third party assets
 
-## Current milestone (in progress): Milestone 11 - Progression/economy/crafting systems
+## Current milestone (in progress): Milestone 12 - Performance and FPS hygiene (targeted)
 
 See `CHANGELOG.md` for milestone history.
 
-Goal: only after the base is stable, consider progression (XP), economy (trade), and crafting overhauls as deliberate, isolated iterations.
-
-Definition of done:
-
-- Clear design intent documented (what problem is being solved).
-- No widespread economy breakage (vendors, loot, crafting).
-- Baseline stability remains unchanged (boot, new game/load, save/load).
-
-## Future milestones (planned)
-
-### Milestone 12 - Performance and FPS hygiene (targeted)
+Milestone 11 is complete; see `CHANGELOG.md` ([0.0.11]).
 
 Goal: reduce stutter and problematic hotspots with targeted, well-understood performance mods (avoid "mystery gains").
 
@@ -63,6 +53,8 @@ Definition of done:
 - Measured improvement in at least one known hotspot or scenario.
 - No new visual or gameplay regressions in common playtest routes.
 - Baseline stability remains unchanged (boot, new game/load, save/load).
+
+## Future milestones (planned)
 
 ### Milestone 13 - Major content module selection (optional)
 
