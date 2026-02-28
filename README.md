@@ -25,9 +25,9 @@ It does not include:
 
 ### Requirements
 
-- Skyrim Special Edition with the **Anniversary Edition** upgrade installed.
-  - Creations baseline: install/download all included Anniversary Edition Creation Club content (AECC bundle).
-  - Verified Creations are not required and are not supported.
+- Skyrim Special Edition (SSE) with the **Anniversary Upgrade** installed (required).
+  - AE CC bundle requirement (required): install/download **ALL** Anniversary Edition Creation Club bundle content ("AE CC bundle content" / "AECC").
+  - Verified Creations are not required and are not supported (do not build your baseline around them).
   - See `docs/decisions.md`.
 - Mod Organizer 2
 - SKSE matching your Skyrim runtime
@@ -50,9 +50,21 @@ Animation generation standard (2026):
 - Generated behavior outputs must live in a dedicated MO2 output mod (never in Overwrite).
 - Do not generate outputs with FNIS or Nemesis.
 
+### Verification checklist (AE CC bundle content + boot)
+
+Use this checklist before troubleshooting load order, missing masters, or odd "cc" errors.
+
+- Confirm you own the Anniversary Upgrade for Skyrim Special Edition.
+- Launch the game once (not through MO2) and ensure it finishes downloading Creations content.
+- In your Skyrim `Data` folder, you should see `_ResourcePack.esl` plus many `cc*.esm` / `cc*.esl` files.
+- In MO2 (right pane -> Plugins), you should see the same `cc*.esm` / `cc*.esl` plugins present and enabled. Compare against `baseline/loadorder.txt` (source of truth).
+- Boot the game through MO2 and reach the main menu without missing master errors.
+  - Maintainers: do this in both profiles (`VistulaRim - Authoring` and `VistulaRim - Playtest`) after any baseline update.
+
 ### How to use the Patch Pack (high level)
 
 1. Install Skyrim SE and set up MO2.
+   - Do the AE CC bundle download first (see the checklist above).
 2. Install the required third party mods yourself from their original sources (see the baseline exports referenced in `paths.md`).
 3. Install the VistulaRim Patch Pack as an MO2 mod (it contains only VistulaRim-owned files).
 4. Enable the VistulaRim patch plugin(s).
@@ -67,7 +79,7 @@ Optional 18+ module:
 - VistulaRim supports an optional adults-only module (Milestone 4). It is not required for the baseline Patch Pack.
 - The baseline exports include the optional 18+ stack (including OStim). Treat it as a separate module you can disable.
 
-Current focus: Milestone 12 (performance and FPS hygiene). Milestones 4 (Followers; optional 18+ module), 5 (audio and weather), 6 (generated outputs policy), 7 (fixes and utilities baseline), 8 (modern visuals baseline, cross-platform), 9 (LOD workflow; user-generated), 10 (UI/HUD pass), and 11 (progression/economy/crafting systems) are complete.
+Current focus: Milestone 13 (planned, optional major content module selection). Milestones 4 (Followers; optional 18+ module), 5 (audio and weather), 6 (generated outputs policy), 7 (fixes and utilities baseline), 8 (modern visuals baseline, cross-platform), 9 (LOD workflow; user-generated), 10 (UI/HUD pass), 11 (progression/economy/crafting systems), and 12 (performance and FPS hygiene) are complete.
 
 Milestone 11 summary (baseline changes):
 
@@ -88,9 +100,9 @@ See `CHANGELOG.md` for milestone history and what changed per release.
 
 Local development requirements:
 
-- Skyrim Special Edition with the **Anniversary Edition** upgrade installed (Steam recommended).
-  - Creations baseline: install/download all included Anniversary Edition Creation Club content (AECC bundle).
-  - Verified Creations are not required and are not supported.
+- Skyrim Special Edition (SSE) with the **Anniversary Upgrade** installed (Steam recommended).
+  - AE CC bundle requirement (required): install/download **ALL** Anniversary Edition Creation Club bundle content ("AE CC bundle content" / "AECC").
+  - Verified Creations are not required and are not supported (do not build your baseline around them).
   - See `docs/decisions.md`.
 - Mod Organizer 2
 - xEdit (SSEEdit) for conflict inspection and forwardings

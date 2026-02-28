@@ -8,8 +8,9 @@
 ## Project status
 
 - Milestone history and current status are tracked in `CHANGELOG.md`.
-- Current focus: Milestone 12 (performance and FPS hygiene).
-- Completed recently: Milestone 11 (progression/economy/crafting systems).
+- Current focus: Milestone 13 (planned, optional major content module selection).
+- Completed recently: Milestone 12 (performance and FPS hygiene).
+- Previously completed: Milestone 11 (progression/economy/crafting systems).
 - Milestone 10 (UI/HUD pass) is complete.
 - Milestone 9 (LOD workflow; user-generated) is complete. Manual: `docs/manual-lod-generation.md`.
 
@@ -91,14 +92,20 @@ Rationale:
 xEdit warnings (known benign):
 - ccBGSSSE025 (Saints & Seducers): some dialogue INFO conditions reference a quest stage that is not present in the quest record. Treated as harmless CC data quirk unless in-game symptoms appear.
 
-## Creations (Creation Club) policy
+## Creations (Creation Club) policy (decision)
 
-Goal: keep the baseline predictable and reduce support risk.
+Statement (baseline requirement):
 
-- Skyrim Special Edition with the Anniversary Edition upgrade is required.
-- Install/download all included Anniversary Edition Creation Club content (AECC bundle).
+- Skyrim Special Edition with the Anniversary Upgrade is required.
+- Install/download ALL Anniversary Edition Creation Club bundle content ("AE CC bundle content" / "AECC").
 - Verified Creations are not required and are not supported.
   - Do not build baseline dependencies on Verified Creations.
+
+Rationale:
+
+- Reproducibility: the baseline exports and patching assume the full AE CC bundle plugin set is present; missing `cc*.esm` / `cc*.esl` files can cause missing masters and unpredictable conflicts.
+- Cross-platform stability: keep the baseline consistent across Win11 and Ubuntu by depending only on the fixed AE CC bundle set.
+- Support risk: Verified Creations can vary and introduce moving-target behavior; the baseline does not account for them.
 
 ## Modern visuals baseline (Milestone 8; complete)
 - Cross-platform visuals baseline uses Community Shaders (baseline does not require ENB).

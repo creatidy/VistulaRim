@@ -29,6 +29,7 @@
 +Heels - Sound Record Distributor - Patch Hub
 +Sound Record Distributor
 +Enhanced Blood Textures
++MEMOSPORE - UI Sound Effects
 -Weather and audio_separator
 +Serana Dialogue Add-On x Ashe - Crystal Heart - Full Banter Patch (Asherana)
 +Ashe - Crystal Heart
@@ -61,10 +62,14 @@
 +Infinity UI
 +SkyUI
 +MCM Helper
++SSE Display Tweaks
 -UI_separator
 +Community Shaders
 +Assorted mesh fixes
 -Visuals ShaderFramework_separator
++Skyrim Project Optimization SE
++eFPS - Anniversary Edition
++eFPS - Exterior FPS boost
 +Actor Limit Fix
 +Bug Fixes SSE
 +Scrambled Bugs
@@ -79,6 +84,8 @@
 +Crash Logger SSE AE VR - PDB support
 +Address Library for SKSE Plugins
 -Frameworks_separator
++RS Children Overhaul
+-NPC_separator
 +Shrine of Vedir I BFCO MCO SCAR Greatsword Moveset I Sswaye's Productions
 +OStim Standalone - Advanced Adult Animation Framework
 +Open Animation Replacer
@@ -132,3 +139,46 @@
 *Creation Club: ccrmssse001-necrohouse
 *Creation Club: ccvsvsse003-necroarts
 *Creation Club: ccvsvsse004-beafarmer
+*Creation Club: ccbgssse002-exoticarrows
+*Creation Club: ccbgssse003-zombies
+*Creation Club: ccbgssse004-ruinsedge
+*Creation Club: ccbgssse006-stendarshammer
+*Creation Club: ccbgssse007-chrysamere
+*Creation Club: ccbgssse008-wraithguard
+*Creation Club: ccbgssse010-petdwarvenarmoredmudcrab
+*Creation Club: ccbgssse013-dawnfang
+*Creation Club: ccbgssse014-spellpack01
+*Creation Club: ccbgssse016-umbra
+*Creation Club: ccbgssse018-shadowrend
+*Creation Club: ccbgssse019-staffofsheogorath
+*Creation Club: ccbgssse021-lordsmail
+*Creation Club: ccbgssse031-advcyrus
+*Creation Club: ccbgssse034-mntuni
+*Creation Club: ccbgssse035-petnhound
+*Creation Club: ccbgssse036-petbwolf
+*Creation Club: ccbgssse040-advobgobs
+*Creation Club: ccbgssse041-netchleather
+*Creation Club: ccbgssse043-crosselv
+*Creation Club: ccbgssse045-hasedoki
+*Creation Club: ccbgssse051-ba_daedricmail
+*Creation Club: ccbgssse057-ba_stalhrim
+*Creation Club: ccbgssse058-ba_steel
+*Creation Club: ccbgssse060-ba_dragonscale
+*Creation Club: ccbgssse062-ba_dwarvenmail
+*Creation Club: ccbgssse063-ba_ebony
+*Creation Club: ccbgssse064-ba_elven
+*Creation Club: ccedhsse001-norjewel
+*Creation Club: ccedhsse002-splkntset
+*Creation Club: cceejsse001-hstead
+*Creation Club: cceejsse002-tower
+*Creation Club: cceejsse003-hollow
+*Creation Club: ccffbsse001-imperialdragon
+*Creation Club: ccffbsse002-crossbowpack
+*Creation Club: ccfsvsse001-backpacks
+*Creation Club: ccmtysse001-knightsofthenine
+*Creation Club: ccmtysse002-ve
+*Creation Club: ccpewsse002-armsofchaos
+*Creation Club: ccqdrsse002-firewood
+*Creation Club: cctwbsse001-puzzledungeon
+*Creation Club: ccvsvsse001-winter
+*Creation Club: ccvsvsse002-pets

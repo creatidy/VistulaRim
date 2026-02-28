@@ -40,19 +40,33 @@ It must not include:
 - Third party assets
 - Large generated outputs that embed third party assets
 
-## Current milestone (in progress): Milestone 12 - Performance and FPS hygiene (targeted)
+## Current milestone: none (Milestone 12 complete)
 
 See `CHANGELOG.md` for milestone history.
 
-Milestone 11 is complete; see `CHANGELOG.md` ([0.0.11]).
+Milestone 12 is complete as of 2026-02-28; see `CHANGELOG.md` ([0.0.12]).
 
-Goal: reduce stutter and problematic hotspots with targeted, well-understood performance mods (avoid "mystery gains").
+Next milestone: Milestone 13 (planned, optional) - major content module selection.
 
-Definition of done:
+Milestone 12 outcomes (concrete):
 
-- Measured improvement in at least one known hotspot or scenario.
-- No new visual or gameplay regressions in common playtest routes.
-- Baseline stability remains unchanged (boot, new game/load, save/load).
+- Performance and FPS hygiene mods added:
+  - SSE Display Tweaks (no plugin).
+  - Skyrim Project Optimization SE (plugin: `Skyrim Project Optimization - Full ESL Version.esm`).
+  - eFPS (plugins: `Occ_Skyrim_Tamriel.esp`, `Occ_Skyrim_AnnEdition.esp`).
+- Baseline hygiene mods added:
+  - MEMOSPORE - UI Sound Effects (plugin: `MEMOSPORE - UI Sound Effects.esp`).
+  - RS Children Overhaul (plugins: `RSkyrimChildren.esm`, `RSChildren.esp`).
+- AE CC requirement finalized and strict:
+  - Skyrim Special Edition with the Anniversary Upgrade is required.
+  - Install/download ALL Anniversary Edition Creation Club bundle content ("AE CC bundle content" / "AECC").
+  - Verified Creations are not required and are not supported.
+
+Baseline prerequisites (unchanged):
+
+- Skyrim Special Edition with the Anniversary Upgrade is required.
+- Install/download ALL Anniversary Edition Creation Club bundle content ("AE CC bundle content" / "AECC").
+- Verified Creations are not required and are not supported.
 
 ## Future milestones (planned)
 
@@ -114,7 +128,7 @@ Do not clean Skyrim.esm.
 
 Creations policy:
 
-- Anniversary Upgrade required; install/download all included Anniversary Edition Creation Club content (AECC bundle).
+- Anniversary Upgrade required; install/download ALL Anniversary Edition Creation Club bundle content ("AE CC bundle content" / "AECC").
 - Verified Creations are not required and are not supported.
 
 #### How to clean safely (MO2 + Quick Auto Clean)
@@ -197,7 +211,7 @@ This reduces update breakage and makes support easier.
 
 - DLC masters cleaned using Quick Auto Clean, stored in 00 - Cleaned Vanilla Masters, no edits in the real Skyrim folder.
 - A strict Overwrite policy is followed: outputs are sorted into dedicated output mods, caches deleted, backups handled intentionally.
-- Creations policy is enforced (Anniversary Upgrade required; install/download all included AECC bundle content; Verified Creations not required/supported).
+- Creations policy is enforced (Anniversary Upgrade required; install/download ALL AE CC bundle content / AECC; Verified Creations are not required and are not supported).
 - The resulting setup remains stable at the baseline test level (boot, new game/load, save/load).
 
 ## Optional future: path to a full installer
