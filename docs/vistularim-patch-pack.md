@@ -40,27 +40,32 @@ It must not include:
 - Third party assets
 - Large generated outputs that embed third party assets
 
-## Current milestone: none (Milestone 12 complete)
+## Current milestone: none (Milestones 13 and 14 complete)
 
 See `CHANGELOG.md` for milestone history.
 
-Milestone 12 is complete as of 2026-02-28; see `CHANGELOG.md` ([0.0.12]).
+Milestone 14 is complete as of 2026-03-01; see `CHANGELOG.md` ([0.0.14]).
+Milestone 13 is complete as of 2026-03-01; see `CHANGELOG.md` ([0.0.13]).
 
-Next milestone: Milestone 13 (planned, optional) - major content module selection.
+Next milestone: Milestone 15 (planned) - widescreen support.
 
-Milestone 12 outcomes (concrete):
+Milestone 14 outcomes (concrete):
 
-- Performance and FPS hygiene mods added:
-  - SSE Display Tweaks (no plugin).
-  - Skyrim Project Optimization SE (plugin: `Skyrim Project Optimization - Full ESL Version.esm`).
-  - eFPS (plugins: `Occ_Skyrim_Tamriel.esp`, `Occ_Skyrim_AnnEdition.esp`).
-- Baseline hygiene mods added:
-  - MEMOSPORE - UI Sound Effects (plugin: `MEMOSPORE - UI Sound Effects.esp`).
-  - RS Children Overhaul (plugins: `RSkyrimChildren.esm`, `RSChildren.esp`).
-- AE CC requirement finalized and strict:
-  - Skyrim Special Edition with the Anniversary Upgrade is required.
-  - Install/download ALL Anniversary Edition Creation Club bundle content ("AE CC bundle content" / "AECC").
-  - Verified Creations are not required and are not supported.
+- Cleaned the three vanilla DLC masters with xEdit Quick Auto Clean (launched from MO2): `Dawnguard.esm`, `HearthFires.esm`, `Dragonborn.esm`.
+- `Skyrim.esm` is not cleaned.
+- Cleaning scope for Milestone 14 is locked: ignore LOOT "dirty plugin" suggestions for `Update.esm`, `cc*` plugins, and third party plugins unless there is a separately justified issue.
+- LOOT now reports the DLC master cleaning warnings as resolved.
+
+Troubleshooting note (Milestone 14):
+
+- Overwrite may remain empty after cleaning: Quick Auto Clean edits the selected plugin file in place. Validate by checking the files in `00 - Cleaned Vanilla Masters`, not by expecting new files in Overwrite.
+- Ensure cleaning does not touch the real game/Stock Game Data folder: the target masters must be supplied by an MO2 mod override before you run Quick Auto Clean. If the override is missing or incorrect, Quick Auto Clean will edit the underlying vanilla files.
+- Correct `00 - Cleaned Vanilla Masters` layout: MO2 mod root equals `Data`, so the masters must be at the mod root (no `Data/` subfolder):
+  - `00 - Cleaned Vanilla Masters/Dawnguard.esm`
+  - `00 - Cleaned Vanilla Masters/HearthFires.esm`
+  - `00 - Cleaned Vanilla Masters/Dragonborn.esm`
+  - Do not use `00 - Cleaned Vanilla Masters/Data/*.esm` (this becomes `Data/Data` and overrides nothing).
+- If you accidentally cleaned the game folder: restore vanilla masters via platform verification (Steam/GOG), then repeat the process with the correct `00 - Cleaned Vanilla Masters` override enabled.
 
 Baseline prerequisites (unchanged):
 
@@ -68,7 +73,7 @@ Baseline prerequisites (unchanged):
 - Install/download ALL Anniversary Edition Creation Club bundle content ("AE CC bundle content" / "AECC").
 - Verified Creations are not required and are not supported.
 
-## Future milestones (planned)
+## Reference workflows
 
 ### Milestone 13 - Major content module selection (optional)
 
@@ -77,6 +82,16 @@ Goal: add one larger content pillar (example: large questline or "collection" mo
 Rule:
 
 - Treat this as a dedicated milestone because it can multiply patch surface and testing cost.
+- Pick exactly one major content pillar per iteration (do not stack multiple large pillars in one milestone).
+
+Mini-procedure (reproducible):
+
+1) Pick exactly one pillar.
+2) Install/tune in `VistulaRim - Authoring`.
+3) Validate in `VistulaRim - Playtest`.
+4) Run LOOT for sanity checks only (do not treat "dirty plugin" messages as an automatic cleaning obligation).
+5) Review conflicts in xEdit. Forward only when justified into `VistulaRim_Patch.esp` (keep patch scope deliberate).
+6) If the pillar adds a major new worldspace, expect LOD regeneration later; follow `docs/manual-lod-generation.md` and keep outputs local-only per `docs/generated-outputs-policy.md`.
 
 Definition of done:
 
@@ -84,135 +99,20 @@ Definition of done:
 - Conflicts reviewed and handled in the patch plugin when justified.
 - Baseline stability remains unchanged (boot, new game/load, save/load).
 
-### Milestone 14 - Cleaning and Wabbajack-friendly policy
+Candidate pillars (recommended order):
 
-Goal: make the setup reproducible, reversible, and future-proof for a later Wabbajack installer.
+- Wyrmstooth (recommended first; relatively isolated).
+- Beyond Skyrim: Bruma (alternative; heavier; requires strict installation discipline).
+- Legacy of the Dragonborn (postpone; patch-heavy; treat as its own dedicated iteration if ever added).
 
-This milestone defines two things:
+Fast test route (generic):
 
-A) What "cleaning" means, what to clean, and how to do it safely.
-
-B) A strict MO2 policy for outputs (Overwrite hygiene) and for root-level files, so the future installer does not inherit random files with unclear provenance.
-
-#### What "cleaning" means (plain language)
-
-xEdit "cleaning" is a controlled edit of a plugin file (ESM/ESP/ESL) that removes or fixes known problematic record patterns:
-
-- ITM (Identical To Master) records: useless overrides that increase conflict surface.
-- UDR (Deleted References): dangerous deletions that can cause crashes if another plugin later touches the deleted object.
-- Deleted Navmeshes: can cause serious AI/pathing issues and sometimes crashes.
-
-Cleaning is not an "optimization". It is conflict and stability hygiene.
-
-#### Reversible-by-design rule (do not destroy your future)
-
-Rule: do not modify the real Skyrim game folder.
-
-Instead:
-
-- Keep the Steam (or GOG) Skyrim install vanilla.
-- Any cleaned masters must live as a separate MO2 mod (or inside a Stock Game copy used by the modlist).
-- Reverting must be as simple as disabling a single MO2 mod.
-
-If you ever accidentally touch the game folder, restore it using the platform's file verification, then re-apply the MO2-side solution.
-
-#### What to clean (minimal, stability-first)
-
-Clean only what LOOT explicitly reports as needing cleaning and what the community considers safe to clean:
-
-- Dawnguard.esm
-- HearthFires.esm
-- Dragonborn.esm
-
-Do not clean Skyrim.esm.
-
-Creations policy:
-
-- Anniversary Upgrade required; install/download ALL Anniversary Edition Creation Club bundle content ("AE CC bundle content" / "AECC").
-- Verified Creations are not required and are not supported.
-
-#### How to clean safely (MO2 + Quick Auto Clean)
-
-Preparation:
-
-- Add xEdit Quick Auto Clean as an MO2 executable (SSEEditQuickAutoClean.exe).
-- Run it through MO2 so outputs land in MO2's Overwrite folder rather than the real game directory.
-
-Process (do one file at a time):
-
-1) Start SSEEditQuickAutoClean from MO2.
-
-2) When asked to select plugins, pick exactly one target, for example Dawnguard.esm.
-
-3) Let it finish, then close xEdit.
-
-4) In MO2, right click Overwrite and create a mod named:
-   00 - Cleaned Vanilla Masters
-
-5) Ensure this mod contains the cleaned ESM(s) and is enabled early in the left pane.
-
-6) Repeat for HearthFires.esm and Dragonborn.esm.
-
-Verification:
-
-- Re-run LOOT. The cleaning warnings for these masters should disappear.
-- Keep SSEEdit backups for a short time, then archive or delete them.
-
-#### Overwrite and root-level file policy (Wabbajack-friendly)
-
-Overwrite is not a mod. It is a temporary bucket for tool outputs that need human sorting.
-
-Rule: Overwrite must be close to empty most of the time.
-
-Whenever new files appear in Overwrite, decide which category they belong to and move them into a dedicated MO2 mod:
-
-A) Root-level files (SKSE, preloader, Creations staging)
-
-- Create a dedicated mod, example:
-  00 - Root (SKSE + Preloader + Creations)
-
-- This mod may contain a Root folder structure used by Root Builder or equivalent tooling.
-
-- Do not keep logs long-term (example: d3dx9_42.log). Delete after validation.
-
-B) Generated configuration for SKSE plugins
-
-- Create a dedicated mod, example:
-  99 - SKSE Plugin INIs (Generated)
-
-- Put generated INIs and plugin config folders there (examples: po3_Tweaks.ini, OpenAnimationReplacer.ini).
-
-C) Tool caches and transient files
-
-- ShaderCache: delete (never ship).
-- Other caches: delete unless a tool explicitly requires persistence.
-
-D) Tool backups
-
-- SSEEdit Backups: keep temporarily while validating, then archive outside MO2 or delete.
-
-Definition of done for this section:
-
-- Overwrite is empty (or contains only short-lived files you are actively sorting).
-- All persistent outputs are in named output mods with clear purpose.
-- No random files are copied into the real Skyrim game folder.
-
-#### Stock Game decision (future Wabbajack path)
-
-If you later build a Wabbajack installer, prefer the Stock Game approach:
-
-- The end-user's vanilla game folder stays untouched.
-- Wabbajack copies game files into a Stock Game folder inside the modlist install.
-- Root-level changes and cleaned masters are applied in a controlled, reproducible way.
-
-This reduces update breakage and makes support easier.
-
-#### Definition of done (Milestone 14)
-
-- DLC masters cleaned using Quick Auto Clean, stored in 00 - Cleaned Vanilla Masters, no edits in the real Skyrim folder.
-- A strict Overwrite policy is followed: outputs are sorted into dedicated output mods, caches deleted, backups handled intentionally.
-- Creations policy is enforced (Anniversary Upgrade required; install/download ALL AE CC bundle content / AECC; Verified Creations are not required and are not supported).
-- The resulting setup remains stable at the baseline test level (boot, new game/load, save/load).
+- Force start via MCM if available.
+- Reach the new worldspace.
+- Enter 1 interior.
+- Save/load on both sides of the transition.
+- Return to Skyrim.
+- Save/load again.
 
 ## Optional future: path to a full installer
 

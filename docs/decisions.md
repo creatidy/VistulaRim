@@ -8,8 +8,10 @@
 ## Project status
 
 - Milestone history and current status are tracked in `CHANGELOG.md`.
-- Current focus: Milestone 13 (planned, optional major content module selection).
-- Completed recently: Milestone 12 (performance and FPS hygiene).
+- Current focus: Milestone 15 (planned, widescreen support).
+- Completed recently: Milestone 14 (cleaning vanilla DLC masters; MO2 override fix).
+- Previously completed: Milestone 13 (major content module selection; Wyrmstooth).
+- Previously completed: Milestone 12 (performance and FPS hygiene).
 - Previously completed: Milestone 11 (progression/economy/crafting systems).
 - Milestone 10 (UI/HUD pass) is complete.
 - Milestone 9 (LOD workflow; user-generated) is complete. Manual: `docs/manual-lod-generation.md`.
@@ -21,6 +23,15 @@
 - Conflicts are resolved via forwardings into VistulaRim_Patch.esp.
 - A clean post-Helgen save is the default playtest starting point.
 - Workflow: install/tune in the Authoring profile, validate in the Playtest profile.
+
+## Milestone 13 decision guidance (major content pillars)
+
+- One major content pillar per iteration (do not install multiple large pillars in one milestone).
+- Prefer isolated pillars first to minimize conflict surface and patch cost.
+- LOOT is sanity only. Do not treat "dirty plugin" messages as an automatic cleaning obligation for third party mods.
+- MCM Helper is a framework and is not expected to appear as its own MCM menu entry.
+  - Troubleshooting (concise): verify SkyUI MCM works, then verify SKSE plugin loading via logs (example: `skse64.log`). Some MCM menus register with delay after loading a save.
+- Playtest checklist remains unchanged (boot, new game/load, save/load) and is still required after any baseline change.
 
 ## Milestone 11 (complete) decision: progression/economy/crafting systems
 
@@ -82,6 +93,13 @@ Rationale:
 - Clear file provenance (what is VistulaRim-owned vs derived from third party assets).
 - Redistributability and permissions safety.
 - Fewer support problems caused by stale or mismatched outputs.
+
+## Milestone 14 cleaning scope and MO2 layout (decision)
+
+- Scope rule: Milestone 14 cleans only `Dawnguard.esm`, `HearthFires.esm`, and `Dragonborn.esm`.
+- Do not clean `Skyrim.esm`.
+- LOOT "dirty plugin" suggestions for `Update.esm`, `cc*` plugins, and third party plugins are advisory only. Ignore them unless there is a separately justified issue to fix later (example: deleted navmeshes with in-game symptoms).
+- Technical note (MO2): MO2 mod root equals `Data`. For a masters override mod like `00 - Cleaned Vanilla Masters`, the masters must be placed at the mod root (do not use a `Data/` subfolder).
 
 ## Patch plugin policy
 

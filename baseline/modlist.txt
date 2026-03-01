@@ -21,6 +21,7 @@
 +Reverb Interior Sounds Expansion
 +Acoustic Space Improvement Fixes
 +SkyPatcher
++Audio Overhaul - Immersive Sounds Integration (AOS - ISC Compatibility Patch)
 +Audio Overhaul for Skyrim
 +True Storms Special Edition
 +Rumble Additions
@@ -41,6 +42,8 @@
 +Missives
 +The Forgotten City
 -Quest and content modules_separator
++Wyrmstooth
+-Major Content (optional)_separator
 +AI Overhaul SSE
 +Extended Encounters
 +Immersive Patrols (Main)
@@ -100,6 +103,7 @@
 -Behavior engines_separator
 +RaceMenu
 -Character creation_separator
++00 - Cleaned Vanilla Masters
 +Campfire - Complete Camping System (Supports Skyrim VR)
 +Skyrim Script Extender (SKSE64)
 +Unofficial Skyrim Special Edition Patch

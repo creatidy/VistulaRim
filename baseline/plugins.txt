@@ -8,10 +8,12 @@
 *Campfire.esm
 *Occ_Skyrim_AnnEdition.esp
 *TrueHUD.esl
+*Wyrmstooth.esp
 *DynDOLOD.esm
 *SkyUI_SE.esp
 *Audio Overhaul Skyrim.esp
 *Immersive Sounds - Compendium.esp
+*AOS_ISC_Integration.esp
 *TrueStormsSE.esp
 *RelightingSkyrim_SSE.esp
 *AI Overhaul.esp
@@ -74,6 +76,8 @@
 *Odin - Vokrii Compatibility Patch.esp
 *VistulaRim_Patch.esp
 *RealisticWaterTwo.esp
+RealisticWaterTwo - Myrwatch Patch.esp
+RealisticWaterTwo - Waves - Wyrmstooth.esp
 *Luminosity Lighting Overhaul.esp
 *DynDOLOD.esp
 *Occlusion.esp

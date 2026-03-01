@@ -2,6 +2,45 @@
 
 This changelog is the source of truth for milestone history and the project process.
 
+## [0.0.14] - 2026-03-01
+
+Milestone 14 complete: cleaned vanilla DLC masters (Quick Auto Clean) and fixed an MO2 override gotcha.
+
+### Changed
+- Cleaned vanilla DLC masters in place via `SSEEditQuickAutoClean.exe` (launched from MO2): `Dawnguard.esm`, `HearthFires.esm`, `Dragonborn.esm`.
+- MO2 gotcha fixed: MO2 mod root equals the `Data` folder. The cleaned masters must live in the mod root of `00 - Cleaned Vanilla Masters` (not in a `Data/` subfolder) so they actually override the real game/Stock Game Data masters.
+- Cleaning scope kept minimal: do not clean `Skyrim.esm`. LOOT "dirty plugin" suggestions for `Update.esm`, `cc*` plugins, and third party plugins are intentionally ignored for Milestone 14.
+
+### Notes
+- Quick Auto Clean edits the selected plugin file in place; MO2 Overwrite may remain empty after cleaning. Validate by checking the files inside `00 - Cleaned Vanilla Masters`, not by expecting new files in Overwrite.
+- Overwrite policy: do not package `SSEEdit Backups` as an MO2 mod. Keep backups transient; archive outside MO2 or delete after validation. Empty Overwrite is the desired steady state.
+
+### Verification
+- Run LOOT: the dirty plugin warnings for the three DLC masters should be cleared.
+- In MO2, confirm `00 - Cleaned Vanilla Masters` is enabled and contains `Dawnguard.esm`, `HearthFires.esm`, `Dragonborn.esm` at the mod root (no `Data/Data` nesting).
+- If the real game/Stock Game Data masters were modified by accident, restore them via platform verification, then repeat cleaning with the correct MO2 override in place.
+
+### Why
+- Keep vanilla masters reversible (MO2 override) while addressing common DLC master hygiene.
+
+### What changed
+- Cleaned the three DLC masters with Quick Auto Clean and documented the correct MO2 override layout and scope constraints.
+
+### How to verify
+- LOOT reports `Dawnguard.esm`, `HearthFires.esm`, and `Dragonborn.esm` as clean, and the game boots normally with `00 - Cleaned Vanilla Masters` enabled.
+
+## [0.0.13] - 2026-03-01
+
+Milestone 13 complete: major content pillar selection (optional) - Wyrmstooth.
+
+### Added
+- Major content pillar: Wyrmstooth (mod: `Wyrmstooth`, plugin: `Wyrmstooth.esp`).
+- Wyrmstooth integration plugin present in baseline exports: `RealisticWaterTwo - Waves - Wyrmstooth.esp`.
+
+### Verification
+- Recommended: run the minimum playtest checklist after applying the Milestone 13 baseline (boot to menu, new game/load, inventory/magic/map, exterior/combat, save/load).
+- Milestone 13 sanity (Wyrmstooth): enter the pillar content, reach the new worldspace, enter 1 interior, save/load on both sides, and return to Skyrim with another save/load.
+
 ## [0.0.12] - 2026-02-28
 
 Milestone 12 complete: performance and FPS hygiene (targeted; baseline exports updated).
@@ -316,7 +355,7 @@ Milestone 1 complete: VistulaRim Core 0.0.1 (stable boot, new game, 5 minutes pl
 
 ## Milestones
 
-Status as of 2026-02-28:
+Status as of 2026-03-01:
 
 - Milestone 0: complete (migration-friendly path conventions and centralized path tracking).
 - Milestone 1: complete (core boot/new game baseline).
@@ -331,8 +370,8 @@ Status as of 2026-02-28:
 - Milestone 10: complete (UI/HUD pass).
 - Milestone 11: complete (progression/economy/crafting systems).
 - Milestone 12: complete (performance and FPS hygiene).
-- Milestone 13: planned (major content module selection).
-- Milestone 14: planned (cleaning and Wabbajack-friendly policy).
+- Milestone 13: complete (major content module selection; Wyrmstooth).
+- Milestone 14: complete (cleaned vanilla DLC masters; MO2 override policy).
 - Milestone 15: planned (widescreen support).
 - Milestone 16: planned (VR support).
 

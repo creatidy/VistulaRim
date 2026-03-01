@@ -51,6 +51,8 @@ Use this same flow for every generator tool:
 4) Name the output mod clearly and consistently.
 5) Keep Overwrite close to empty.
 
+Note: not every tool primarily writes to Overwrite. xEdit Quick Auto Clean edits the selected plugin file in place, so Overwrite may remain empty. Treat Overwrite as a sorting bucket, not a success indicator.
+
 Recommended naming convention for output mods:
 
 - `VR - Output - <ToolName>`
@@ -163,6 +165,20 @@ What to do:
 Quick sanity checks:
 - The generator reports success with no missing behavior errors.
 - In game, test a few common animation actions (walk/run, weapon draw, sneak) for obvious T-poses or frozen states.
+
+### xEdit (Quick Auto Clean)
+
+What it does:
+- Edits the selected plugin file in place (it does not generate a separate output set).
+
+Where it appears:
+- The plugin you cleaned is modified at its real filesystem location (often inside an MO2 mod folder if you set up an override).
+- MO2 Overwrite may remain empty after cleaning. This is normal.
+
+Policy:
+- Do not treat Overwrite contents (or lack of them) as a signal of cleaning success. Validate by checking the actual cleaned plugin file(s).
+- xEdit backups are transient (`SSEEdit Backups`). Do not package them as an MO2 mod. Archive outside MO2 or delete after validation.
+- Steady state: Overwrite is empty (or contains only short-lived files you are actively sorting).
 
 ### Tool caches, shader caches, logs, dumps, backups
 

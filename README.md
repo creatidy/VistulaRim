@@ -61,6 +61,12 @@ Use this checklist before troubleshooting load order, missing masters, or odd "c
 - Boot the game through MO2 and reach the main menu without missing master errors.
   - Maintainers: do this in both profiles (`VistulaRim - Authoring` and `VistulaRim - Playtest`) after any baseline update.
 
+MCM Helper note (troubleshooting):
+
+- If you cannot find "MCM Helper" in the MCM list: that is normal. MCM Helper is a framework used by other mods to create MCM menus.
+- If the MCM menu itself is missing, verify SkyUI.
+- If other MCM menus do not appear, wait after loading a save (registration can be delayed) and verify SKSE plugin loading via logs (examples: `skse64.log`).
+
 ### How to use the Patch Pack (high level)
 
 1. Install Skyrim SE and set up MO2.
@@ -79,7 +85,9 @@ Optional 18+ module:
 - VistulaRim supports an optional adults-only module (Milestone 4). It is not required for the baseline Patch Pack.
 - The baseline exports include the optional 18+ stack (including OStim). Treat it as a separate module you can disable.
 
-Current focus: Milestone 13 (planned, optional major content module selection). Milestones 4 (Followers; optional 18+ module), 5 (audio and weather), 6 (generated outputs policy), 7 (fixes and utilities baseline), 8 (modern visuals baseline, cross-platform), 9 (LOD workflow; user-generated), 10 (UI/HUD pass), 11 (progression/economy/crafting systems), and 12 (performance and FPS hygiene) are complete.
+Current focus: Milestone 15 (planned, widescreen support). Milestones 4 (Followers; optional 18+ module), 5 (audio and weather), 6 (generated outputs policy), 7 (fixes and utilities baseline), 8 (modern visuals baseline, cross-platform), 9 (LOD workflow; user-generated), 10 (UI/HUD pass), 11 (progression/economy/crafting systems), 12 (performance and FPS hygiene), 13 (major content module selection), and 14 (cleaned vanilla DLC masters; MO2 override policy) are complete.
+
+Milestone 13 (optional): major content modules are optional, installed by users from original sources. For stability, choose one pillar at a time and validate it before adding another.
 
 Milestone 11 summary (baseline changes):
 
