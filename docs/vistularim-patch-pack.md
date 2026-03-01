@@ -122,6 +122,12 @@ Only after the Patch Pack is stable:
 - Every file in the installation has clear provenance.
 - Generated outputs are either user-generated or handled by strict, permission-safe rules.
 
+Linux note (Ubuntu 24.04 maintainers):
+
+- Stock Game (separate copied game root) vs non-Stock Game is a disk and support tradeoff. Current Ubuntu 24.04 maintainer workflow runs without Stock Game to save disk.
+- Do not ignore `profiles/` during installer compilation: profile files (notably `profiles/*/plugins.txt` and `profiles/*/loadorder.txt`) are deterministic state and must be included.
+- If an Ubuntu install fails on "Installing Included Files" with profile hash errors, prefer the Jackify fork with inline metadata repair (see `docs/decisions.md`).
+
 ## Final milestones (planned)
 
 ### Milestone 15 - Widescreen support

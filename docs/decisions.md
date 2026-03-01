@@ -125,6 +125,18 @@ Rationale:
 - Cross-platform stability: keep the baseline consistent across Win11 and Ubuntu by depending only on the fixed AE CC bundle set.
 - Support risk: Verified Creations can vary and introduce moving-target behavior; the baseline does not account for them.
 
+## Linux installer tooling (Ubuntu 24.04) (decision)
+
+Default (Linux local `.wabbajack` installs):
+
+- Use the Jackify fork (creatidy): https://github.com/creatidy/Jackify
+- Reason: some `.wabbajack` archives contain inconsistent InlineFile directive metadata (Hash/Size mismatch vs the actual SourceDataID bytes). On Ubuntu this can surface as "Installing Included Files" hash failures (example: `profiles/.../plugins.txt`, `profiles/.../loadorder.txt`).
+- Control: set `JACKIFY_REPAIR_INLINE_METADATA=0` to disable the pre-install repair step.
+
+Note:
+
+- Wabbajack under Proton can fail Nexus login with "WebView failed to initialize" if WebView2 is missing in the Wabbajack prefix. Prefer the Jackify fork path on Linux.
+
 ## Modern visuals baseline (Milestone 8; complete)
 - Cross-platform visuals baseline uses Community Shaders (baseline does not require ENB).
 - Optional Windows-only ENB may exist later only as a separate module.

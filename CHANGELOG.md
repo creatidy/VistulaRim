@@ -15,6 +15,10 @@ Milestone 14 complete: cleaned vanilla DLC masters (Quick Auto Clean) and fixed 
 - Quick Auto Clean edits the selected plugin file in place; MO2 Overwrite may remain empty after cleaning. Validate by checking the files inside `00 - Cleaned Vanilla Masters`, not by expecting new files in Overwrite.
 - Overwrite policy: do not package `SSEEdit Backups` as an MO2 mod. Keep backups transient; archive outside MO2 or delete after validation. Empty Overwrite is the desired steady state.
 
+### Docs
+- Added `docs/ubuntu-24-04.md` (Steam + Proton setup and AE CC bundle verification on Ubuntu 24.04).
+- Added Linux installer guidance: recommend the Jackify fork and document the inline metadata repair workaround.
+
 ### Verification
 - Run LOOT: the dirty plugin warnings for the three DLC masters should be cleared.
 - In MO2, confirm `00 - Cleaned Vanilla Masters` is enabled and contains `Dawnguard.esm`, `HearthFires.esm`, `Dragonborn.esm` at the mod root (no `Data/Data` nesting).

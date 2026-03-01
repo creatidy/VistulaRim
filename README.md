@@ -106,6 +106,33 @@ See `CHANGELOG.md` for milestone history and what changed per release.
 - Reasoning, motivations, and policy decisions: `docs/decisions.md`
 - Generated outputs policy and repo guardrails: `docs/generated-outputs-policy.md`
 
+### Ubuntu 24.04 support (experimental, maintainer-grade)
+
+Target environment (known-good baseline):
+
+- Ubuntu 24.04
+- Steam + Skyrim Special Edition
+- Proton (recommend Proton GE via ProtonUp-Qt)
+
+Requirements are unchanged:
+
+- Anniversary Upgrade required
+- Full AE CC bundle content required (AECC)
+- Verified Creations are not required and are not supported
+
+Linux verification checklist (AECC + MO2):
+
+- In the Skyrim `Data` folder, confirm `_ResourcePack.esl` exists and many `cc*` files exist (`cc*.esl` / `cc*.esm` and `cc*.bsa`).
+- In MO2 (right pane -> Plugins), confirm the `cc*` plugins appear and are enabled. Compare against `baseline/loadorder.txt` (source of truth).
+- Known Linux quirk: Skyrim may prompt to download Creations again even when the `cc*` files exist. Treat the prompt as non-authoritative and verify the on-disk files instead.
+
+Installer on Linux:
+
+- Recommended: Jackify fork (creatidy) for `.wabbajack` installs on Linux (inline metadata repair enabled by default): https://github.com/creatidy/Jackify
+- Why: avoids "Installing Included Files" hash failures seen on Ubuntu for deterministic profile files (example: `profiles/.../plugins.txt` and `profiles/.../loadorder.txt`).
+
+Main guide: `docs/ubuntu-24-04.md`
+
 Local development requirements:
 
 - Skyrim Special Edition (SSE) with the **Anniversary Upgrade** installed (Steam recommended).
