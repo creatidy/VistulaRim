@@ -5,7 +5,7 @@ It does not ship third party mods, third party assets, or tool-generated outputs
 
 This policy applies to both players (what to generate locally) and maintainers (what must never be committed or released).
 
-If you need repo path conventions, see `paths.md` (single source of truth).
+If you need example local path conventions, see `docs/paths.example.md` (copy to `.local/paths.md` if you want a personalized version).
 
 ## What we ship
 

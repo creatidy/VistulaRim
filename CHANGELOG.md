@@ -298,7 +298,7 @@ Milestone 4 complete: followers (general). Serana is the first anchor.
 
 Milestone 3 complete: quest and content module (content expansion without destabilizing the base).
 
-Note: see the MO2 exports referenced in `paths.md` for the exact modlist delta.
+Note: see the MO2 exports referenced in `docs/paths.example.md` for the exact modlist delta.
 
 ### Added
 - Content (baseline snapshot):
@@ -381,8 +381,8 @@ Status as of 2026-03-01:
 
 Notes:
 
-- Authoritative repo paths and locations are centralized in `paths.md`.
-- The installed-mod snapshot is tracked as MO2 export text files; if their location changes later, update `paths.md` and the references in docs (do not duplicate path lists in multiple places).
+- Example local path conventions live in `docs/paths.example.md` (maintainers can keep personalized paths in `.local/paths.md`, which is gitignored).
+- The installed-mod snapshot is tracked as MO2 export text files; if their location changes later, update `docs/paths.example.md` and the references in docs (do not duplicate path lists in multiple places).
 
 ### Milestone 4 (complete): followers (optional 18+ module)
 

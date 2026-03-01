@@ -24,3 +24,5 @@
 ## Optional: if you use the recommended MO2 output mod naming, ignore those directories too
 mods/VR - Output - */
 
+## Local-only maintainer files (never commit)
+.local/

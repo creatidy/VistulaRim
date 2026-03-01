@@ -71,7 +71,7 @@ MCM Helper note (troubleshooting):
 
 1. Install Skyrim SE and set up MO2.
    - Do the AE CC bundle download first (see the checklist above).
-2. Install the required third party mods yourself from their original sources (see the baseline exports referenced in `paths.md`).
+2. Install the required third party mods yourself from their original sources (use the baseline exports in `baseline/modlist.txt`, `baseline/plugins.txt`, and `baseline/loadorder.txt`).
 3. Install the VistulaRim Patch Pack as an MO2 mod (it contains only VistulaRim-owned files).
 4. Enable the VistulaRim patch plugin(s).
 5. (Optional) Run LOOT as a sanity check, then launch and playtest.
@@ -100,7 +100,7 @@ See `CHANGELOG.md` for milestone history and what changed per release.
 
 ## For maintainers
 
-- Paths and authoritative repo locations: `paths.md`
+- Example local path conventions (copy to `.local/paths.md` if you want a personalized version): `docs/paths.example.md`
 - Process and milestone history: `CHANGELOG.md`
 - Current and future milestone planning: `docs/vistularim-patch-pack.md`
 - Reasoning, motivations, and policy decisions: `docs/decisions.md`

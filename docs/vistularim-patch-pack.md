@@ -9,7 +9,7 @@ This document is the place for current and future milestone planning. Past miles
 - Reasoning, motivations, and policy decisions: `docs/decisions.md`
 - Generated outputs policy and repo guardrails: `docs/generated-outputs-policy.md`
 - LOD generation manual (user-generated outputs): `docs/manual-lod-generation.md`
-- Paths and authoritative repo locations: `paths.md`
+- Example local path conventions: `docs/paths.example.md` (copy to `.local/paths.md` if you want a personalized version)
 
 ## Docs and repo update rules
 
@@ -18,7 +18,7 @@ Keep these rules intact when updating docs and repo layout:
 1. `README.md` is end-user facing and reflects current state (keep meaningful info, config requirements, and any maintainer notes that remain useful).
 2. The whole process and the milestone history live in `CHANGELOG.md`.
 3. `docs/vistularim-patch-pack.md` tracks only current and future milestones; past milestones move to `CHANGELOG.md`.
-4. Do not store paths in several places; reference `paths.md`.
+4. Do not store paths in several places; reference `docs/paths.example.md` (and keep your real local paths in `.local/paths.md`, which is gitignored).
 5. Keep reasoning, motivations, decisions, and logical choices in `docs/decisions.md`.
 6. Keep these rules in this document (this section).
 
