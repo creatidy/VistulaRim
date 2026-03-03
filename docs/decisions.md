@@ -7,14 +7,20 @@
 
 ## Project status
 
-- Milestone history and current status are tracked in `CHANGELOG.md`.
-- Current focus: Milestone 15 (planned, widescreen support).
-- Completed recently: Milestone 14 (cleaning vanilla DLC masters; MO2 override fix).
-- Previously completed: Milestone 13 (major content module selection; Wyrmstooth).
-- Previously completed: Milestone 12 (performance and FPS hygiene).
-- Previously completed: Milestone 11 (progression/economy/crafting systems).
-- Milestone 10 (UI/HUD pass) is complete.
-- Milestone 9 (LOD workflow; user-generated) is complete. Manual: `docs/manual-lod-generation.md`.
+- `0.0.14` is closed (completed 2026-03-01).
+- New cadence started on 2026-03-02 with version-coded milestones.
+- Active milestone: `0.1.1` (planning/version reset).
+- Active iteration: `0.1.x` (expansion), targeting Wabbajack release `0.2.0`.
+- Roadmap and iteration planning live in `docs/roadmap.md` and `docs/iterations/*.md`.
+- Player-facing release highlights are tracked in `CHANGELOG.md`.
+
+## Versioning contract (decision)
+
+- Milestones use `0.A.1` through `0.A.10`.
+- Each milestone increments only the 3rd digit.
+- Iteration close is a Wabbajack release tag `0.(A+1).0`.
+- Global milestone numbering is retired.
+- `1.0.0+` is reserved for post-project maintenance.
 
 ## Stability and workflow
 - Stability is the primary KPI.

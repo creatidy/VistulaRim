@@ -85,24 +85,41 @@ Optional 18+ module:
 - VistulaRim supports an optional adults-only module (Milestone 4). It is not required for the baseline Patch Pack.
 - The baseline exports include the optional 18+ stack (including OStim). Treat it as a separate module you can disable.
 
-Current focus: Milestone 15 (planned, widescreen support). Milestones 4 (Followers; optional 18+ module), 5 (audio and weather), 6 (generated outputs policy), 7 (fixes and utilities baseline), 8 (modern visuals baseline, cross-platform), 9 (LOD workflow; user-generated), 10 (UI/HUD pass), 11 (progression/economy/crafting systems), 12 (performance and FPS hygiene), 13 (major content module selection), and 14 (cleaned vanilla DLC masters; MO2 override policy) are complete.
+Release state:
 
-Milestone 13 (optional): major content modules are optional, installed by users from original sources. For stability, choose one pillar at a time and validate it before adding another.
+- `0.0.14` is closed (completed on 2026-03-01).
+- New cadence started on 2026-03-02 with version-coded milestones only.
+- Active milestone: `0.1.1` (planning/version reset).
+- Active iteration: `0.1.x` (UX expansion), targeting Wabbajack release `0.2.0`.
 
-Milestone 11 summary (baseline changes):
+Cadence contract:
 
-- Progression: character leveling is XP-based (Experience).
-- Economy: prices and barter are tuned via Trade and Barter.
-- Crafting: NPC crafting/enchanting services are enabled via Honed Metal.
-- Settings: settings loaders are used where available to reduce repeated MCM setup across new games.
+1. Milestones use `0.A.1` through `0.A.10`.
+2. Iteration close is a Wabbajack release tag `0.(A+1).0`.
+3. Current planning horizon uses a strict cycle: Expansion -> Stabilization -> Expansion.
 
-See `CHANGELOG.md` for milestone history and what changed per release.
+Planning overview:
+
+- `0.1.x` (Expansion): detailed milestone plan in `docs/iterations/0.1.md`.
+- `0.2.x` (Stabilization): directional plan in `docs/iterations/0.2.md`.
+- `0.3.x` (Expansion): directional plan in `docs/iterations/0.3.md`.
+
+Skyrim LLM Runtime alignment:
+
+- `skyrim-llm-runtime` is developed in parallel.
+- `0.1.x` and `0.2.x` focus on preparation and interface constraints.
+- First visible integration points are planned for `0.3.x`.
+
+See `CHANGELOG.md` for player-facing release highlights.
 
 ## For maintainers
 
 - Example local path conventions (copy to `.local/paths.md` if you want a personalized version): `docs/paths.example.md`
-- Process and milestone history: `CHANGELOG.md`
-- Current and future milestone planning: `docs/vistularim-patch-pack.md`
+- Strategic roadmap: `docs/roadmap.md`
+- Iteration plans: `docs/iterations/0.1.md`, `docs/iterations/0.2.md`, `docs/iterations/0.3.md`
+- Milestone execution logs: `docs/execution/0.1/`
+- Technical release notes: `docs/releases/`
+- Player-facing release highlights: `CHANGELOG.md`
 - Reasoning, motivations, and policy decisions: `docs/decisions.md`
 - Generated outputs policy and repo guardrails: `docs/generated-outputs-policy.md`
 
