@@ -92,23 +92,12 @@ Release state:
 - Active milestone: `0.1.1` (planning/version reset).
 - Active iteration: `0.1.x` (UX expansion), targeting Wabbajack release `0.2.0`.
 
-Cadence contract:
+Planning references:
 
-1. Milestones use `0.A.1` through `0.A.10`.
-2. Iteration close is a Wabbajack release tag `0.(A+1).0`.
-3. Current planning horizon uses a strict cycle: Expansion -> Stabilization -> Expansion.
-
-Planning overview:
-
-- `0.1.x` (Expansion): detailed milestone plan in `docs/iterations/0.1.md`.
-- `0.2.x` (Stabilization): directional plan in `docs/iterations/0.2.md`.
-- `0.3.x` (Expansion): directional plan in `docs/iterations/0.3.md`.
-
-Skyrim LLM Runtime alignment:
-
-- `skyrim-llm-runtime` is developed in parallel.
-- `0.1.x` and `0.2.x` focus on preparation and interface constraints.
-- First visible integration points are planned for `0.3.x`.
+- Cadence contract and iteration map: `docs/roadmap.md`
+- Current detailed plan: `docs/iterations/0.1.md`
+- Directional follow-on plans: `docs/iterations/0.2.md`, `docs/iterations/0.3.md`
+- `skyrim-llm-runtime` alignment notes: `docs/skyrim-llm-runtime.md`
 
 See `CHANGELOG.md` for player-facing release highlights.
 
@@ -152,10 +141,6 @@ Main guide: `docs/ubuntu-24-04.md`
 
 Local development requirements:
 
-- Skyrim Special Edition (SSE) with the **Anniversary Upgrade** installed (Steam recommended).
-  - AE CC bundle requirement (required): install/download **ALL** Anniversary Edition Creation Club bundle content ("AE CC bundle content" / "AECC").
-  - Verified Creations are not required and are not supported (do not build your baseline around them).
-  - See `docs/decisions.md`.
 - Mod Organizer 2
 - xEdit (SSEEdit) for conflict inspection and forwardings
 - LOOT (sanity checks only)

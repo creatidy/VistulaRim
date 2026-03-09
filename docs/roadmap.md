@@ -4,6 +4,8 @@
 
 - `0.0.14` is closed (completed on 2026-03-01).
 - New cadence starts on 2026-03-02 with version-coded milestones only.
+- Active milestone: `0.1.1` (planning/version reset).
+- Active iteration: `0.1.x` (UX expansion), targeting Wabbajack release `0.2.0`.
 - Iteration cycle is strict for current planning horizon: Expansion -> Stabilization -> Expansion.
 
 ## Versioning and cadence contract
@@ -42,5 +44,6 @@
 - Strategic planning: `docs/roadmap.md`
 - Iteration planning: `docs/iterations/*.md`
 - Milestone execution detail: `docs/execution/<iteration>/<milestone>.md`
+- Standalone maintenance notes: `docs/maintenance/*.md`
 - Technical release notes: `docs/releases/<version>.md`
 - Policy and rationale: `docs/decisions.md`, `docs/generated-outputs-policy.md`
