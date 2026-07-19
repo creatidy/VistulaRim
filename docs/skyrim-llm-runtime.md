@@ -1,4 +1,39 @@
-# Skyrim LLM Runtime (PoC) - Concept, Business Context, Architecture, Requirements (v0.1)
+# Skyrim LLM Runtime (PoC) - Concept, Business Context, Architecture, Requirements (v0.2)
+
+## Implementation status (2026-03-27)
+
+This section tracks what has been built relative to the architecture described below. It is updated when the runtime reaches a meaningful milestone.
+
+**P1 — First real Skyrim roundtrip (complete)**
+
+- Runtime core: mock + live dual-mode provider, OpenAI Responses API integration (`POST /v1/responses`), retry on 429/5xx, configurable timeout, API key from env-only (never in config files).
+- Thin client (`mod/`): file-bridge request/response loop, `RecapController` (hotkey → snapshot → event log assembly → bridge request → response rendering), budget tracking, C-compatible plugin API.
+- CLI: `runtime-cli` with `--timeout-ms` flag, offline timeout integration test.
+- Observability: provider mode/model/tokens logged per response, fallback tests, service fallback matrix.
+- Dev environment: cross-platform devcontainer with Windows bind mounts, `export-windows-build.sh` for host-side CMake.
+- Secrets posture: `api_key` removed from config; env-only (`OPENAI_API_KEY`).
+
+**P2 — SKSE wiring (scaffolded, pending concrete Skyrim bindings)**
+
+- SKSE host scaffold (`skse-plugin/`): 12 source files, 13 headers, CMake + vcpkg.
+  - `SkyrimPluginShell` singleton with guarded `SKSEPluginLoad()`.
+  - CommonLibSSE plugin DLL target (`skyrim_llm_skse_plugin`) + portable static lib target.
+  - Hotkey dispatch via `RE::InputEvent` sink.
+  - HUD status line (transient) + message box (recap body) dual-path UI.
+  - Location capture, game time capture, objective capture scaffolds.
+  - `SeedInitialEventLog()` workflow helper.
+- Configurable via `SKYRIM_LLM_DEPLOY_DIR` and `SKYRIM_LLM_BRIDGE_BASE_DIR` CMake variables.
+- Phase 2 guide: `docs/40-skyrim-mod/06-phase-2-skse-wiring.md` (348 lines, covers export flow, callback contract, hotkey plan, code map, build/deploy checklist).
+
+**What is not yet done**
+
+- Concrete Skyrim bindings for live game-state capture (location, quest objectives, inventory snapshots) — currently scaffolded with debug overrides.
+- In-game help feature with strict grounding.
+- Narrator TTS.
+- Evaluation harness.
+- Provider abstraction beyond OpenAI.
+
+**Trajectory**: P0 scaffold → P1 end-to-end recap (working in real Skyrim) → P2 SKSE integration (scaffolded) → P3 visible integration with VistulaRim baseline (planned for iteration `0.3.x`).
 
 ## How to read this document
 

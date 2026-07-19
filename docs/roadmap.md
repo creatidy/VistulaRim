@@ -34,7 +34,8 @@
 
 `skyrim-llm-runtime` is developed in parallel.
 
-- `0.1.x` and `0.2.x`: prepare foundations and constraints only (non-visible integration work).
+- Runtime P1 (first real Skyrim roundtrip) is complete. P2 (SKSE wiring) is scaffolded.
+- `0.1.x` and `0.2.x`: prepare foundations and constraints only (non-visible integration work). The runtime's P1 completion de-risks the `0.1.9` prep milestone.
 - `0.3.x`: first visible integration points, optional and low-conflict.
 
 ## Documentation ownership
