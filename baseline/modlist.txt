@@ -102,6 +102,7 @@
 +Paired Animation Improvements
 +Animation Queue Fix
 -Adult and animation frameworks_separator
++Faster HDT-SMP
 +Auto Skeleton Patch - Universal Behaviour Runtime
 +XP32 Maximum Skeleton Special Extended
 +Fores New Idles in Skyrim SE - FNIS SE

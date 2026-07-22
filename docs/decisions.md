@@ -149,3 +149,26 @@ Note:
 - Shader cache is local-only (`-_Local - ShaderCache`) and is never distributed (DO NOT DISTRIBUTE).
 - Community Shaders configuration is kept in `_Config - CommunityShaders`.
 - Behavior generation standard (2026): Pandora only. Keep generated behavior outputs in a dedicated MO2 output mod (never in Overwrite).
+
+## SMP hair physics (Faster HDT-SMP) (decision)
+
+Statement (added 2026-07-22):
+
+- `Faster HDT-SMP` (FSMP) is the SMP/HDT physics solver for the baseline.
+- It exists to support SMP hair meshes already present in the load order (specifically `Ashe - SMP_Hair.esp` from `Ashe - Crystal Heart`). Without a solver, SMP hair renders broken (stretched/invisible/frozen geometry).
+- FSMP is a third-party SKSE DLL plugin (`SKSE/Plugins/hdtsmp64.dll`); it adds no ESP/ESM/ESL and therefore does not appear in `baseline/loadorder.txt` or `baseline/plugins.txt`, only in `baseline/modlist.txt`.
+
+Scope and constraints:
+
+- This is a deliberate visuals-baseline scope expansion beyond the Community Shaders cross-platform baseline.
+- The no-redistribution rule still applies: FSMP is installed by users from its original source; the Patch Pack ships no FSMP files.
+- Config tuning is local; the default preset ships unless a VistulaRim-owned config is added later.
+- Stability KPI still holds: if FSMP causes crashes or measurable framerate regressions, the fallback is to disable `Ashe - SMP_Hair.esp` (and FSMP) and use Ashe's non-physics hair path.
+
+Cross-platform note:
+
+- FSMP is Windows-leaning. Ubuntu/Proton playtest validation is required before treating SMP hair as a guaranteed cross-platform feature. Until then, SMP hair is a baseline-enabled feature with cross-platform confidence pending.
+
+Maintenance reference:
+
+- `docs/maintenance/2026-07-22-ashe-smp-hair-fsmp.md`
