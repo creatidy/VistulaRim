@@ -2,14 +2,9 @@
 
 Player-facing release highlights for VistulaRim.
 
-Format contract (from 2026-03-02):
+Versioning is now simple sequential: `0.1`, `0.2`, `0.3`, ... (entries before `0.1` use the old `0.0.N` numbering).
 
-- `Highlights`
-- `Compatibility`
-- `Upgrade Notes`
-- `Known Issues`
-
-Technical maintainer release details are tracked in `docs/releases/` for new iteration-era releases (`0.2.0+`).
+Each entry uses: `Highlights`, `Compatibility`, `Upgrade Notes`, `Known Issues`.
 
 ## [0.0.14] - 2026-03-01
 

@@ -70,7 +70,7 @@ Placement recommendation:
 
 - Install/run tools from a simple tools folder (example: `D:\Tools\...`), not from `Program Files`, not from the Steam game directory.
 
-## Generation order (basic first pass used for Milestone 9)
+## Generation order (basic first pass)
 
 ### 1) Terrain LOD (Tamriel) with xLODGen / SSELODGen
 
@@ -232,7 +232,7 @@ Fix:
   - Consider only after the basic pass is stable and you can measure the tradeoff.
 - **Grass LOD**
   - Requires grass billboards and more time; adds another axis of troubleshooting.
-  - Treat as a separate iteration (do not mix into a "first pass").
+  - Treat as a separate pass (do not mix into a "first pass").
 - **Additional worldspaces**
   - Add beyond Tamriel only when you have a reason and a repeatable test route.
 - **Performance/quality tuning**

@@ -4,7 +4,7 @@ VistulaRim is a Skyrim Special Edition project built independently, step by step
 
 It is inspired by Elysium Remastered as a private reference baseline for ideas and comparisons, but it is not a fork and it never reuses upstream files.
 
-The shipped product is a Patch Pack: original patches and configuration that sit on top of mods you install yourself. A Wabbajack installer is a possible future/optional path, but it is not the current product.
+The shipped product is a Patch Pack: original patches and configuration that sit on top of mods you install yourself. A Wabbajack installer is a possible future path once the baseline is playtest-stable.
 
 ## For players
 
@@ -27,7 +27,7 @@ It does not include:
 
 - Skyrim Special Edition (SSE) with the **Anniversary Upgrade** installed (required).
   - AE CC bundle requirement (required): install/download **ALL** Anniversary Edition Creation Club bundle content ("AE CC bundle content" / "AECC").
-  - Verified Creations are not required and are not supported (do not build your baseline around them).
+  - Verified Creations are not required and are not supported.
   - See `docs/decisions.md`.
 - Mod Organizer 2
 - SKSE matching your Skyrim runtime
@@ -37,11 +37,11 @@ Optional (useful for troubleshooting / power users):
 - xEdit (SSEEdit) for conflict inspection
 - LOOT (sanity checks only)
 
-Modern visuals baseline (Milestone 8; complete):
+Modern visuals baseline:
 
 - Shader framework (baseline, cross-platform): Community Shaders (Win11 + Ubuntu support).
 - Config hygiene: Community Shaders configuration lives in the dedicated MO2 mod `_Config - CommunityShaders`.
-- Local-only cache: shader cache is split into `-_Local - ShaderCache` and must never be distributed (DO NOT DISTRIBUTE).
+- Local-only cache: shader cache is split into `-_Local - ShaderCache` and must never be distributed.
 - ENB: not required for the baseline. An optional Windows-only ENB preset may exist later as a separate module.
 
 Animation generation standard (2026):
@@ -59,7 +59,6 @@ Use this checklist before troubleshooting load order, missing masters, or odd "c
 - In your Skyrim `Data` folder, you should see `_ResourcePack.esl` plus many `cc*.esm` / `cc*.esl` files.
 - In MO2 (right pane -> Plugins), you should see the same `cc*.esm` / `cc*.esl` plugins present and enabled. Compare against `baseline/loadorder.txt` (source of truth).
 - Boot the game through MO2 and reach the main menu without missing master errors.
-  - Maintainers: do this in both profiles (`VistulaRim - Authoring` and `VistulaRim - Playtest`) after any baseline update.
 
 MCM Helper note (troubleshooting):
 
@@ -76,41 +75,30 @@ MCM Helper note (troubleshooting):
 4. Enable the VistulaRim patch plugin(s).
 5. (Optional) Run LOOT as a sanity check, then launch and playtest.
 
-Note: Generated outputs (LOD, BodySlide outputs, etc) are not redistributed in early versions. See `docs/generated-outputs-policy.md` for the standard MO2 workflow. For LOD specifically, see `docs/manual-lod-generation.md`.
+Note: Generated outputs (LOD, BodySlide outputs, etc) are not redistributed. See `docs/generated-outputs-policy.md` for the standard MO2 workflow. For LOD specifically, see `docs/manual-lod-generation.md`.
 
 ### Current status
 
 Optional 18+ module:
 
-- VistulaRim supports an optional adults-only module (Milestone 4). It is not required for the baseline Patch Pack.
+- VistulaRim supports an optional adults-only module. It is not required for the baseline Patch Pack.
 - The baseline exports include the optional 18+ stack (including OStim). Treat it as a separate module you can disable.
 
 Release state:
 
-- `0.0.14` is closed (completed on 2026-03-01).
-- New cadence started on 2026-03-02 with version-coded milestones only.
-- Active milestone: `0.1.1` (planning/version reset).
-- Active iteration: `0.1.x` (UX expansion), targeting Wabbajack release `0.2.0`.
-
-Planning references:
-
-- Cadence contract and iteration map: `docs/roadmap.md`
-- Current detailed plan: `docs/iterations/0.1.md`
-- Directional follow-on plans: `docs/iterations/0.2.md`, `docs/iterations/0.3.md`
-- `skyrim-llm-runtime` alignment notes: `docs/skyrim-llm-runtime.md`
+- `0.0.14` is the last closed release under the old numbering (completed 2026-03-01).
+- Active version: `0.1` (UX expansion). See `docs/roadmap.md`.
 
 See `CHANGELOG.md` for player-facing release highlights.
 
 ## For maintainers
 
 - Example local path conventions (copy to `.local/paths.md` if you want a personalized version): `docs/paths.example.md`
-- Strategic roadmap: `docs/roadmap.md`
-- Iteration plans: `docs/iterations/0.1.md`, `docs/iterations/0.2.md`, `docs/iterations/0.3.md`
-- Milestone execution logs: `docs/execution/0.1/`
-- Technical release notes: `docs/releases/`
-- Player-facing release highlights: `CHANGELOG.md`
-- Reasoning, motivations, and policy decisions: `docs/decisions.md`
+- Goals and versioning: `docs/roadmap.md`
+- Policy decisions: `docs/decisions.md`
 - Generated outputs policy and repo guardrails: `docs/generated-outputs-policy.md`
+- Baseline change history: `docs/maintenance/`
+- Player-facing release highlights: `CHANGELOG.md`
 
 ### Ubuntu 24.04 support (experimental, maintainer-grade)
 
@@ -120,22 +108,18 @@ Target environment (known-good baseline):
 - Steam + Skyrim Special Edition
 - Proton (recommend Proton GE via ProtonUp-Qt)
 
-Requirements are unchanged:
-
-- Anniversary Upgrade required
-- Full AE CC bundle content required (AECC)
-- Verified Creations are not required and are not supported
+Requirements are unchanged: Anniversary Upgrade required, full AE CC bundle content required, Verified Creations not supported.
 
 Linux verification checklist (AECC + MO2):
 
 - In the Skyrim `Data` folder, confirm `_ResourcePack.esl` exists and many `cc*` files exist (`cc*.esl` / `cc*.esm` and `cc*.bsa`).
-- In MO2 (right pane -> Plugins), confirm the `cc*` plugins appear and are enabled. Compare against `baseline/loadorder.txt` (source of truth).
+- In MO2 (right pane -> Plugins), confirm the `cc*` plugins appear and are enabled. Compare against `baseline/loadorder.txt`.
 - Known Linux quirk: Skyrim may prompt to download Creations again even when the `cc*` files exist. Treat the prompt as non-authoritative and verify the on-disk files instead.
 
 Installer on Linux:
 
-- Recommended: Jackify fork (creatidy) for `.wabbajack` installs on Linux (inline metadata repair enabled by default): https://github.com/creatidy/Jackify
-- Why: avoids "Installing Included Files" hash failures seen on Ubuntu for deterministic profile files (example: `profiles/.../plugins.txt` and `profiles/.../loadorder.txt`).
+- Recommended: Jackify fork (creatidy) for `.wabbajack` installs on Linux: https://github.com/creatidy/Jackify
+- Why: avoids "Installing Included Files" hash failures seen on Ubuntu for deterministic profile files.
 
 Main guide: `docs/ubuntu-24-04.md`
 

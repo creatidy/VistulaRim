@@ -1,50 +1,48 @@
 # VistulaRim Roadmap
 
-## Current state
+## Versioning
 
-- `0.0.14` is closed (completed on 2026-03-01).
-- New cadence starts on 2026-03-02 with version-coded milestones only.
-- Active milestone: `0.1.1` (planning/version reset).
-- Active iteration: `0.1.x` (UX expansion), targeting Wabbajack release `0.2.0`.
-- Iteration cycle is strict for current planning horizon: Expansion -> Stabilization -> Expansion.
+- Simple sequential versioning: `0.1`, `0.2`, `0.3`, ...
+- Each version is one focused batch of work, tagged when done.
+- No milestone sub-versions, no iteration cycles, no cadence contract.
 
-## Versioning and cadence contract
+## Current state (2026-07-22)
 
-1. Milestones use `0.A.B` where `B` is `1..10`.
-2. Milestones increment only the 3rd digit.
-3. Iteration close is a Wabbajack release tag `0.(A+1).0`.
-4. Global milestone numbering is retired.
-5. `1.0.0+` is reserved for post-project maintenance.
+- Closed: `0.0.14` (2026-03-01) — last release under the old numbering.
+- Active: `0.1` — UX-focused expansion, baseline already partially populated.
+- Baseline source of truth: `baseline/modlist.txt`, `baseline/plugins.txt`, `baseline/loadorder.txt`.
 
-## Iteration map
+## Goals
 
-| Iteration | Type | Milestone range | Close tag |
-|---|---|---|---|
-| `0.1.x` | Expansion (UX) | `0.1.1` -> `0.1.10` | `0.2.0` |
-| `0.2.x` | Stabilization | `0.2.1` -> `0.2.10` | `0.3.0` |
-| `0.3.x` | Expansion | `0.3.1` -> `0.3.10` | `0.4.0` |
+### 0.1 — UX expansion (active)
 
-## Iteration plans
+What's already in the baseline from this goal:
+- Compass Navigation Overhaul, Infinity UI, TrueHUD, SoulsyHUD, Yes Im Sure
+- Survival Mode Improved - SKSE, Faster HDT-SMP
 
-- Detailed plan: `docs/iterations/0.1.md`
-- Directional plan: `docs/iterations/0.2.md`
-- Directional plan: `docs/iterations/0.3.md`
+Still to do:
+- Playtest the current HUD overlap cluster as a unit (Compass Navigation + Infinity UI + TrueHUD + SoulsyHUD)
+- Evaluate and add UI theme (Dear Diary or Untarnished)
+- Evaluate moreHUD / moreHUD Inventory for information readability
+- Evaluate loot/selection QoL (QuickLoot, Better Third Person Selection)
+- Evaluate Wheeler for quick-access fun
+- Widescreen/ultrawide hardening
+- First-run onboarding + MCM Recorder preset
 
-## Runtime alignment
+### Next
 
-`skyrim-llm-runtime` is developed in parallel.
+- `0.2` — stabilization and release hardening (cross-platform parity, regression pass, packaging)
+- Wabbajack package is a goal after the baseline is playtest-stable.
 
-- Runtime P1 (first real Skyrim roundtrip) is complete. P2 (SKSE wiring) is scaffolded.
-- `0.1.x` and `0.2.x`: prepare foundations and constraints only (non-visible integration work). The runtime's P1 completion de-risks the `0.1.9` prep milestone.
-- `0.3.x`: first visible integration points, optional and low-conflict.
+## Deferred
+
+- `skyrim-llm-runtime` integration — postponed. See `docs/deferred/skyrim-llm-runtime.md`. Not planned in detail.
 
 ## Documentation ownership
 
 - Player-facing status and usage: `README.md`
 - Player-facing release highlights: `CHANGELOG.md`
-- Strategic planning: `docs/roadmap.md`
-- Iteration planning: `docs/iterations/*.md`
-- Milestone execution detail: `docs/execution/<iteration>/<milestone>.md`
-- Standalone maintenance notes: `docs/maintenance/*.md`
-- Technical release notes: `docs/releases/<version>.md`
+- Goals and versioning: this file (`docs/roadmap.md`)
 - Policy and rationale: `docs/decisions.md`, `docs/generated-outputs-policy.md`
+- Baseline change history: `docs/maintenance/*.md`
+- Reference guides: `docs/manual-lod-generation.md`, `docs/ubuntu-24-04.md`, `docs/paths.example.md`
